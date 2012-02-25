@@ -1,0 +1,113 @@
+\begin{multicols}{2}
+
+\section{Reihen}
+
+\subsection{Definitionen}
+Eine Reihe $\sum_{n = 1}^\infty a_n$ ist \underline{konvergent} mit Grenzwert
+$s$, wenn die Folge der \underline{Partialsummen} $(S_m)$, $S_m :=
+\sum_{n=1}^m a_n$ gegen $s$ konvergiert. Also wenn gilt: $S_m \to s$.
+
+\begin{definition}[$\epsilon$-Kriterium]
+	$\forall \epsilon > 0 \; \exists n_0 \in \N \; \forall m \geq n_0: \left|
+	\sum_{n=1}^m a_n - s \right| < \epsilon$
+\end{definition}
+
+\begin{definition}[Absolute Konvergenz]
+Wenn auch die Reihe der Absolutbeträge $\sum_{n=1}^\infty |a_n|$ konvergiert, so
+heisst die Reihe absolut konvergent. Aus der absoluten Konvergenz folgt
+Konvergenz. Der Umkehrschluss ist nicht möglich.
+\end{definition}
+
+\subsection{Rechenregeln Reihen}
+Für \underline{konvergente} Reihen gilt:
+\[
+	\sum_{n=1}^\infty a_n = A, \sum_{n=1}^\infty b_n = B \Rightarrow
+	\sum_{n=1}^\infty (\alpha a_n + \beta b_n) = \alpha A + \beta B
+\]
+
+\subsection{Konvergenzkriterien}
+\begin{tabular}{|l|}
+\hline
+	Konvergiert $\sum_{n=1}^\infty a_n$, so ist $\lim_{n \to \infty} a_n = 0$.\\
+	Wenn also $\lim_{n \to \infty} a_n \neq 0$, so konvergiert die Reihe
+	\underline{nicht}\\
+\hline
+\end{tabular}
+
+\end{multicols}
+
+{\footnotesize
+\begin{tabular}{|p{2cm}||p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\hline & \multicolumn{4}{l}{schnelles Fallen} & langsames Fallen \\
+\hline
+ 
+wie schnell gehen die $a_n$ gegen 0 & exponentiell wie $q^n, |q| < 1$ &
+polynominal wie $n^{-\alpha}, \alpha > 1$ & \multicolumn{2}{|c|}{höchstens wie
+$1/n$} & gar nicht \\ \hline
+
+Beispiele & \begin{align*} a_n = \frac{n^8}{2^n},\\ a_n =
+(\sqrt[n]{n} - 1)^n,\\
+a_n = \frac{1}{n!},\\ a_n = \left( \frac{-1}{4}\right)^n \end{align*} &
+\begin{align*} a_n = \frac{1}{n^2}, \\ a_n = \frac{1}{n^{100}}, \\ a_n =
+\frac{1}{(n + \ln n)^2}, \\ a_n = \frac{20}{n^2 - 33} \end{align*} &
+\begin{align*} a_n = \frac{(-1)^n}{\ln n}, \\ a_n = \frac{(-1)^n}{n}
+\end{align*} & \begin{align*} a_n = \frac{1}{\ln n}, \\ a_n = \frac{1}{n + \ln
+n}, \\ a_n = \frac{1}{n} \end{align*} & \begin{align*} a_n = (-1)^n, \\ a_n =
+\sin n, \\ a_n = n^2 \end{align*}\\ \hline
+
+passende Konvergenzkriterien & Wurzel- und Quotientenkriterium & Integral- und
+Verdichtungskriterium & Leibniz-Kriterium & & $a_n \not\to 0$ \\ \hline
+
+Vergleichs-, Majoranten-, Minorantenkriterium & Vergleichen mit $q^n$ &
+Vergleichen mit $n^{-\alpha}$ & kein Vergleich möglich & Vergleichen mit
+$\frac{1}{n}$ & \\ \hline
+
+Konvergenz-verhalten & \multicolumn{2}{c|}{absolute Konvergenz} & keine
+absolute Konvergenz (einfach Konvergenz) & \multicolumn{2}{|c|}{Divergenz} \\
+\hline
+
+\end{tabular}
+}
+
+\begin{tabular}{|p{4cm}|p{15cm}|}\hline
+\multicolumn{2}{|c|}{direkte Kriterien}\\ \hline
+
+\textbf{Quotientenkriterium} & Gut für Reihen, die Fakultäten oder Glieder der
+Form $a^n$ enthalten. Nicht auf Reihen anwendbar, in denen die Glieder nur wie
+eine Potenz von $n$ fallen. \\ \hline
+
+\textbf{Wurzelkriterium} & Gut in Reihen, deren Glieder $n$-te Potenzen sind,
+zusammen mit der Stirlingformel oft auch bei Fakultäten anwendbar. \\ \hline
+
+\textbf{Leibnizkriterium} & Nur für alternierende Reihen.\\ \hline
+
+\textbf{Integralkriterium} & Anwendbar auf monotone Reihen.\\ \hline
+
+\multicolumn{2}{|c|}{direkte Kriterien}\\ \hline
+
+\textbf{Vergleichskriterium} & Ermöglicht es "`Störterme"' wegzulassen und so
+einfachere Reihen zu untersuchen \\ \hline
+
+\textbf{Verdichtungskriterium} & Bei monotonen Reihen anwendbar. Für Reihen mit
+langsam fallenden Gliedern \\ \hline
+
+\textbf{Majoranten- und Minorantenkriterium} & Ähnlich wie Vergleichskriterium.
+Wird mit einer Reihe verglichen, deren Glieder stets kleiner oder grösser sind.
+\\ \hline
+\end{tabular}
+
+\begin{multicols}{2}
+\subsubsection{Reihen Kriterien}
+Achtung. Die nachfolgenden Kriterien sagen nur aus, ob die Reihen konvergiert
+oder nicht. Sie sagen \underline{nicht} aus, gegen was sie konvergieren!
+
+\paragraph{Quotientenkriterium}
+\[
+\left| \frac{a_{n+1}}{a_n} \right| \to q. \quad \text{Dann gilt} \begin{cases}
+q < 1 & \Rightarrow \text{Reihe konvergiert absolut} \\
+q = 1 & \Rightarrow \text{keine Aussage}\\
+q > 1 & \Rightarrow \text{Reihe divergiert}
+\end{cases}
+\]
+
+\end{multicols}

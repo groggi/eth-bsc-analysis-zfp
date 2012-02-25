@@ -1,0 +1,201 @@
+\begin{multicols}{2}
+\section{Folgen}
+
+\subsection{Definitionen}
+\begin{description}
+  \item[konvergent] $\lim_{x \to \infty} a_n$ existiert
+  \item[divergent] $\lim_{x \to \infty} a_n$ existiert nicht
+  \item[Nullfolge] $\lim_{x \to \infty} a_n = 0$ gilt
+  \item[beschränkt] Es gibt $C_1, C_2$, so dass gilt $C_1 \leq a_n \leq C_2$
+  bzw. $C$ gibt, so dass $|a_n| \leq C$
+  \item[unbeschränkt] falls $(a_n)$ nicht beschränkt ist. Unbeschränkte folgen
+  sind stets \underline{divergent}
+  \item[monoton wachsend] $a_n \leq a_{n+1} \quad \forall n \in \N$
+  \item[streng monoton wachsend] $a_n < a_{n+1} \quad \forall n \in \N$
+  \item[monoton fallend] $a_n \geq a_{n+1} \quad \forall n \in \N$
+  \item[streng monoton fallend] $a_n > a_{n+1} \quad \forall n \in \N$
+  \item[alternierend] die Vorzeichen der Folgenglieder wechseln sich ab
+  \item[bestimmt divergent / uneigentlich konvergent] es gilt $\lim_{n \to
+  \infty} a_n = \pm \infty$
+\end{description}
+
+\begin{definition}[Grenzwert]
+	\begin{align*}
+		\lim_{n \to \infty} a_n = a & \Leftrightarrow a_n \to a \\
+		& \Leftrightarrow \forall \epsilon > 0 \exists n_0 \in \N \forall n \geq n_0:
+		|a_n - a| < \epsilon
+	\end{align*}
+\end{definition}
+
+\begin{definition}[Teilfolge]
+Werden von einer Folge beliebig viele Glieder weggelassen, aber nur so viele,
+dass noch unendlich viele übrigbleiben, so erhält man eine Teilfolge.
+\end{definition}
+
+\begin{definition}[Häufungspunkt]
+	$a$ ist Häufungspunkt der Folge $(a_n)$, wenn in jeder Umgebung von $a$
+	unendlich viele Folgeglieder liegen. Das ist äquivalent damit, dass $a$ der
+	Limes einer Teilfolge von $(a_n)$ ist.
+\end{definition}
+
+\begin{definition}[Limes superior / Limes inferior]
+	Ist $(a_n)$ eine beschränkte Folge, so heisst der grösste Häufungspunkt Limes
+	superior ($\limsup_{n \to \infty} a_n$ oder $\overline{\lim}_{n \to \infty}
+	a_n$). Der kleinste Häufungspunkt ist der Limes inferior ($\liminf_{n \to
+	\infty} a_n$ oder $\underline{\lim}_{n \to \infty} a_n$)
+\end{definition}
+
+\subsection{Rechnen mit Eigenschaften}
+Addition:
+\begin{itemize}
+  \item $(a_n), (b_n)$ konvergiert $\Rightarrow (a_n + b_n)$ konvergiert
+  \item $(a_n)$ konvergiert, $(b_n)$ divergent $\Rightarrow (a_n + b_n)$
+  divergent
+  \item $(a_n)$ beschränkt, $(b_n)$ beschränkt $\Rightarrow (a_n + b_n)$
+  beschränkt
+  \item $(a_n)$ beschränkt, $(b_n)$ unbeschränkt $\Rightarrow (a_n + b_n)$
+  unbeschränkt
+  \item $(a_n)$ beschränkt, $(b_n) \to \pm \infty \Rightarrow (a_n + b_n) \to
+  \pm \infty$
+  \item $(a_n) \to \infty$, $(b_n) \to \infty \Rightarrow (a_n + b_n) \to \infty$
+  \item $(a_n) \to -\infty$, $(b_n) \to -\infty \Rightarrow (a_n + b_n) \to
+  -\infty$
+\end{itemize}
+
+Produkt:
+\begin{itemize}
+  \item $(a_n)$ Nullfolge, $(b_n)$ beschränkt $\Rightarrow (a_n b_n)$ Nullfolge
+  \item $(a_n)$ konvergent, $(b_n)$ beschränkt $\Rightarrow (a_n b_n)$
+  beschränkt
+  \item $(a_n)$ konvergent, $(b_n)$ konvergent $\Rightarrow (a_n b_n)$
+  konvergent
+  \item $(a_n)$ konvergent gegen $a \neq 0$, $(b_n)$ divergent $\Rightarrow
+  (a_n b_n)$ divergent
+\end{itemize}
+
+\subsection{Rechnen mit Grenzwerten}
+$\lim_{n \to \infty} a_n = a$, $\lim_{n \to \infty} b_n = b$
+\begin{itemize}
+  \item $\lim_{n \to \infty} (a_n \pm b_n) = a \pm b$
+  \item $\lim_{n \to \infty} (c \cdot a_n) = c \cdot a$
+  \item $\lim_{n \to \infty} (a_n b_n) = ab$
+  \item \underline{Achtung:} $\lim_{n \to \infty} (a_n)^c = (\lim_{n \to
+  \infty} a_n)^c$, nur wenn $c \neq n$
+  \item $\lim_{n \to \infty} \frac{a_n}{b_n} = \frac{a}{b}, \quad (b_n)$ keine
+  Nullfolge
+\end{itemize}
+
+\subsection{Hilfsmittel}
+\textbf{Bernoullische Ungleichung}: Für $x \geq -1$ und $n \in \N$
+\[
+	(1+x)^n \geq 1 + nx
+\]
+
+
+\textbf{Vergleich von Folgen}: weiter rechts stehende Werte gehen schneller nach
+$\infty$
+\[
+	1, \quad \ln x, \quad n^\alpha \; (\alpha > 0), \quad q^n \; (q > 1), \quad n!,
+	\quad n^n
+\]
+
+\textbf{Stirlingformel}:
+\[
+	n! \approx \sqrt{2 \pi n} \left (\frac{n}{e} \right )^n
+	\Rightarrow \left ( \frac{n}{e} \right )^n \sqrt{2 \pi n} \leq n! \leq \left (
+	\frac{n}{e} \right )^n \sqrt{2 \pi n} \cdot e^\frac{12}{n}
+\]
+
+\subsection{Konvergenzkriterien}
+\begin{align*}
+	a_n \to a \Leftrightarrow a_n - a \to 0 \Leftrightarrow |a_n - a| \to 0
+\end{align*}
+	
+\begin{itemize}[leftmargin=*]	
+	\item Ist $\lim_{n \to \infty} a_n = a$, so ider der Limes $a$ einziger
+	Häufungspunkt der Folge $(a_n)$ und jede Teilfolge konvergiert auch gegen $a$.
+	
+	\textbf{Beispiel:} Wegen $\left( 1 + \frac{1}{n} \right)^n \to e$, so gilt auch
+	$\left( 1 + \frac{1}{2n} \right)^{2n} \to e$
+	
+	\item Hat die Folge zwei verschiedene Häufungspunkte, so ist die Folge sicher
+	divergent.
+	
+	\item Ist die Folge monoton steigend und nach oben beschränkt, dann existiert
+	$\lim_{n \to \infty} a_n$. Ist die Folge monoton fallend und nach unten
+	beschränkt, dann existiert $\lim_{n \to \infty} a_n$
+	
+	\item Konvergiert $\sum_{n=0}^\infty a_n$, so ist $\lim_{n \to \infty} a_n =
+	0$\\
+	Damit kann die Regeln für Reihen verwenden. Siehe Grenzwerte von Reihen.
+	
+	\item Gibt es eine Funktion $f$ mit $f(n) = a_n$ und $\lim_{x \to \infty} f(x)
+	= a$, so gilt auch $\lim_{n \to \infty} a_n = a$.\\
+	Damit kann man zum Beispiel die Regel von \underline{l'Hospital} und die
+	restlichen Methoden anwenden. Siehe Grenzwerte von Funktionen.\\
+	\underline{Achtung:} Es kann sein, dass $f$ keinen Grenzwert besitzt, aber
+	$(a_n)$ schon.
+	
+	\item \textbf{Einschliessungskriterium}: Sind $(a_n), (b_n), (c_n)$ Folgen mit
+	$a_n \leq b_n \leq c_n$ und haben $(a_n), (c_n)$ den gleichen Grenzwert $a$, so
+	konvergiert auch $(b_n)$ nach $a$.
+\end{itemize}
+
+\subsection{Tipps \& Beispiele}
+\subsubsection{Brüche}
+$\lim_{n \to \infty} \frac{n^2 + \ln n}{\sqrt{n^4 - n^3}}$
+
+Bei Brüchen empfiehlt es sich den am stärksten wachsenden Teil (das am
+schnellsten wachsende $n$) zu kürzen. In diesem Fall ist es das $n^4$ in der
+Wurzel, also $n^2$.
+
+\begin{align*}
+\ldots &= \lim_{n \to \infty} \frac{n^2 + \ln n}{\sqrt{n^4 - n^3}}
+\cdot \frac{\frac{1}{n^2}}{\frac{1}{n^2}} = \lim_{n \to \infty} \frac{n^2 + \ln
+n}{n^2 \sqrt{1 - \frac{1}{n}}} \cdot \frac{\frac{1}{n^2}}{\frac{1}{n^2}} \\
+&= \lim_{n \to \infty} \frac{1 + \frac{\ln n}{n^2}}{\sqrt{1 - \frac{1}{n}}}
+= \frac{1 + 0}{\sqrt{1 - 0}} = 0
+\end{align*}
+
+\subsubsection{l'Hospital für Folgen (Folge als Funktion)}
+$\lim_{n \to \infty} \frac{\ln n}{n^2}$
+
+Die Funktion $f(x) = \frac{\ln x}{x^2}$ entspricht unseren Folgegliedern ($f(n)
+= a_n = \frac{\ln n}{n^2}$). Für $n \to \infty$ hat der Nenner und der Zähler
+den Grenzwert $\infty$, also wenden wir die Regel von l'Hospital an.
+
+\begin{align*}
+\ldots &= \lim_{x \to \infty} \frac{(\ln x)'}{(x^2)'} = \lim_{x \to \infty}
+\frac{\frac{1}{x}}{2x} = \lim_{x \to \infty} \frac{1}{x^2} = 0
+\end{align*}
+
+Somit geht auch die Folge gegen 0.
+
+\subsubsection{Wurzeln}
+$\lim_{n \to \infty} (\sqrt{n^2 + an + 1} - \sqrt{n^2 + 1})$
+
+Hier wendet man die dritte binomische Formel an, um den grenzwert zu berechnen.
+Die einzelnen Terme streben jeweils gegen $\infty$ und $\infty - \infty$ kann
+nicht berechnet werden.
+
+\underline{Achtung} auf die Vorzeichen beim Anwenden der Regel!
+
+\begin{align*}
+&= \lim_{n \to \infty} (\sqrt{n^2 + an + 1} - \sqrt{n^2 + 1}) \cdot
+\left(\frac{\sqrt{n^2 + an + 1} + \sqrt{n^2 + 1}}{\sqrt{n^2 + an + 1} +
+\sqrt{n^2 + 1}} \right) \\
+&= \lim_{n \to \infty} \frac{(n^2 + an + 1) - (n^2 + 1)}{\sqrt{n^2 + an + 1} +
+\sqrt{n^2 + 1}} \\
+&= \lim_{n \to \infty} \frac{an}{\sqrt{n^2 + an + 1} + \sqrt{n^2 + 1}} 
+\end{align*}
+
+nun verwenden wir den Tipp für Brüche und kürzen das $n$ heraus
+
+\begin{align*}
+\ldots &= \lim_{n \to \infty} \frac{a}{\sqrt{1 + \frac{a}{n} + \frac{1}{n^2}} +
+\sqrt{1 + \frac{1}{n^2}}} = \frac{a}{1 + 1} = \frac{a}{2}
+\end{align*}
+
+\todo{Gelbes Rechenbuch 1, Seiten 163+ mit aufnehmen? Rekursive Folgen und so\ldots}
+
+\end{multicols}

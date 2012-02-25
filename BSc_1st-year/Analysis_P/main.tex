@@ -1,0 +1,48 @@
+%% 
+%% Analysis 1&2 BSc (2010/2011)
+%%
+%% (C) 2011 Gregor Wegberg
+%% 
+%% License: Creative Commons Attribution-Share Alike 3.0 Unported
+%% http://creativecommons.org/licenses/by-sa/3.0/
+%% 
+
+
+\documentclass[portrait,a4paper,titlepage]{article}
+\usepackage[ngerman]{babel}
+
+\input{./../../standard-options.tex}
+\toggletrue{amsthm_disbale}
+
+\input{./../../standard-definitions.tex}
+\input{./../../standard-exam-summary.tex}
+\toggletrue{listsep}
+
+\graphicspath{{./data/}}
+
+\usepackage{empheq}
+
+\begin{document}
+
+{\footnotesize
+\begin{multicols}{3}
+\thispagestyle{empty}
+\setcounter{tocdepth}{3}
+\tableofcontents
+\end{multicols}
+}
+
+\newpage
+\setcounter{page}{1}
+\pagestyle{plain}
+
+\input{folgen.tex}
+\input{reihen.tex}
+
+\newpage
+\input{formeltafel.tex}
+
+% fill the page
+\clearpage
+
+\end{document}
