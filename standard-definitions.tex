@@ -1,0 +1,172 @@
+%%
+%% 
+%% (C) 2011 Gregor Wegberg
+%%
+%% Based on work of Stefan Heule, Licensed as Creative Commons Attribution-Share Alike 3.0 Unported
+%% 
+%% License: Creative Commons Attribution-Share Alike 3.0 Unported
+%% http://creativecommons.org/licenses/by-sa/3.0/
+%% 
+
+%% The following lines need to be included in the main tex file
+%\documentclass[portrait,a4paper,titlepage]{article}
+%\input{standard-definitions.tex}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fontenc}
+
+\usepackage{color}
+\usepackage{soul}
+\usepackage{soulutf8}
+
+\usepackage{alltt}
+\renewcommand{\ttdefault}{txtt}
+
+\usepackage{amssymb,amsfonts,amsmath}
+\usepackage[e]{esvect}
+
+\usepackage{algorithmicx}
+
+\usepackage{graphicx}
+\usepackage[svgnames]{xcolor}
+
+\usepackage{cancel}
+
+\usepackage{geometry}
+\geometry{a4paper, left=20mm, right=20mm, top=25mm, bottom=20mm}
+
+% Allows fancy stuff in the page header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% hyperref
+\usepackage[colorlinks=false,pdfborder={0 0 0}]{hyperref}
+
+% multirow and multicol
+\usepackage{multirow}
+\usepackage{multicol}
+\columnsep24pt
+\columnseprule0.1pt
+
+% enumerate
+\renewcommand\theenumi{\arabic{enumi}}
+\renewcommand\labelenumi{\theenumi.}
+\renewcommand\theenumii{\roman{enumii}}
+\renewcommand\labelenumii{\theenumii)}
+
+\usepackage{listings}
+\lstset{
+    floatplacement={tbp}
+    basicstyle=\ttfamily\mdseries,
+    identifierstyle=,
+    stringstyle=\color{gray},
+    numbers=left,
+    numbersep=5pt,
+    inputencoding=utf8,
+    xleftmargin=8pt,
+    xrightmargin=8pt,
+    keywordstyle=[1]\bfseries,
+    keywordstyle=[2]\bfseries,
+    keywordstyle=[3]\bfseries,
+    keywordstyle=[4]\bfseries,
+    numberstyle=\tiny,
+    stepnumber=1,
+    breaklines=true,
+    frame=lines,
+    showstringspaces=false,
+    tabsize=2,
+    commentstyle=\color{gray},
+    captionpos=b,
+    float=float,
+    language={Java}
+}
+\newcommand{\code}[1]{\lstinline{#1}}
+
+% depth of section numbering
+\setcounter{secnumdepth}{4}
+
+%% Redefine the \paragraph command:
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{0mm}%
+    {-\baselineskip}%
+    {0.5\baselineskip}%
+    {\normalfont\bfseries}%
+}%
+\makeatother
+
+% theorems
+\usepackage{amsthm}
+\iftoggle{amsthm_disbale}{%
+
+}{%
+	\iftoggle{amsthm_de}{%
+		\theoremstyle{plain}
+		\newtheorem{lemma}{Lemma}[section]
+		\newtheorem{theorem}{Theorem}[section]
+		\newtheorem{corollary}{Korollar}[section]
+		\newtheorem{tipp}{Tipp}[section]
+		
+		\theoremstyle{definition}
+		\newtheorem{definition}{Definition}[section]
+		\newtheorem{satz}{Satz}[section]
+		\newtheorem{hilfssatz}{Hilfssatz}[section]
+	}{%
+		\theoremstyle{plain}
+		\newtheorem{lemma}{Lemma}[section]
+		\newtheorem{theorem}{Theorem}[section]
+		\newtheorem{corollary}{Corollary}[section]
+		\newtheorem{remark}{Remark}[section]
+		\newtheorem{observation}{Observation}[section]
+		\newtheorem{assumption}{Assumption}[section]
+		\newtheorem{proposition}{Proposition}[section]
+		\newtheorem{claim}{Claim}[section]
+		
+		\theoremstyle{definition}
+		\newtheorem{definition}{Definition}[section]
+	}
+}
+
+% parindent
+\parindent0px
+\parskip3pt
+
+% redefine greek letters
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+
+% shortcuts in math mode
+\newcommand{\bs}{\boldsymbol}
+\newcommand{\mc}{\mathcal}
+\newcommand{\norm}[1]{| \!\:\! | #1 | \!\:\! |}
+\newcommand{\with}{\;|\;} % with in set notation
+\newcommand{\ds}{\displaystyle}
+\newcommand{\nop}[1]{}
+\newcommand{\argmax}{\operatorname*{arg\;max}}
+\newcommand{\argmin}{\operatorname*{arg\;min}}
+\newcommand{\rmd}{\mathrm{d}} % for integrals
+\newcommand{\ggT}{\operatorname*{ggT}}
+\newcommand{\kgV}{\operatorname*{kgV}}
+
+% number sets
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\powerset}{\mathcal P}
+
+% probabilities
+\newcommand{\Prob}[1]{\operatorname{Pr}\left[#1\right]}
+\newcommand{\Ex}[1]{\mathbb{E}\left[#1\right]}
+
+% todo
+\newcommand{\todo}[1]{\sethlcolor{red}\hl{$\ggg$ \textbf{TODO} [#1]}\sethlcolor{yellow}}
+
+
+% big-o notation
+\newcommand{\bigO}[1]{\mc O\left(#1\right)}
+
+
