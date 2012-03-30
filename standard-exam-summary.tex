@@ -1,12 +1,8 @@
 \usepackage{geometry}
-
+\usepackage{amsthm}
 \usepackage{enumitem}
 
-\iftoggle{listsep} {
-	\setlist{nolistsep}
-} {
-	%
-}
+\setlist{nolistsep}
 
 \geometry{top=1cm,left=0.4cm,right=0.4cm}
 
@@ -27,25 +23,3 @@
                                 {1ex plus .2ex}%
                                 {\normalfont\small\bfseries}}
 \makeatother
-
-\iftoggle{sec_nr}{%
-} {%
-% Don't print section numbers
-\setcounter{secnumdepth}{0}
-
-\setlength{\columnsep}{5pt}
-}
-
-% short theorems
-\newtheoremstyle{examSummary}%
-{0.5pt}    %Space above
-{0.5pt}    %Space below
-{}       %Body font
-{}       %Indent amount
-{\bf}    	 %Theorem head font
-{}       %Punctuation after theorem head
-{0.1em} %Space after theorem head
-{}       %Theorem head spec
-
-\theoremstyle{examSummary}
-\newtheorem*{definition}{Def.}

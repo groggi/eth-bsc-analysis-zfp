@@ -94,38 +94,6 @@
 }%
 \makeatother
 
-% theorems
-\usepackage{amsthm}
-\iftoggle{amsthm_disbale}{%
-
-}{%
-	\iftoggle{amsthm_de}{%
-		\theoremstyle{plain}
-		\newtheorem{lemma}{Lemma}[section]
-		\newtheorem{theorem}{Theorem}[section]
-		\newtheorem{corollary}{Korollar}[section]
-		\newtheorem{tipp}{Tipp}[section]
-		
-		\theoremstyle{definition}
-		\newtheorem{definition}{Definition}[section]
-		\newtheorem{satz}{Satz}[section]
-		\newtheorem{hilfssatz}{Hilfssatz}[section]
-	}{%
-		\theoremstyle{plain}
-		\newtheorem{lemma}{Lemma}[section]
-		\newtheorem{theorem}{Theorem}[section]
-		\newtheorem{corollary}{Corollary}[section]
-		\newtheorem{remark}{Remark}[section]
-		\newtheorem{observation}{Observation}[section]
-		\newtheorem{assumption}{Assumption}[section]
-		\newtheorem{proposition}{Proposition}[section]
-		\newtheorem{claim}{Claim}[section]
-		
-		\theoremstyle{definition}
-		\newtheorem{definition}{Definition}[section]
-	}
-}
-
 % parindent
 \parindent0px
 \parskip3pt
