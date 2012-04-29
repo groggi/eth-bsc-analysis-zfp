@@ -35,4 +35,48 @@ Zu Zeigen: $(A \cup B)^c = A^c \cap B^c$ wobei $A, B, C$ Untermengen von $X$ sin
 &= \{x \in X: x \not\in A\} \cap \{x \in X: x \not\in B\} = A^c \cap B^c
 \end{align*}
 
+\subsection{bekannte Mengen}
+\begin{description}
+	\item[$\N$, natürliche Zahlen:] $\{1, 2, 3, \ldots\}$
+	\item[$\Z$, ganze Zahlen:] $\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\}$
+	\item[$\Q$, rationale Zahlen:] $\{\frac{p}{q} | p \in \Z, q \in \N \backslash \{0\}\}$
+	\item[$\R$, reelle Zahlen:] ``alle'' Zahlen, die wir im Alltag brauchen. Genauer: rationale Zahlen und die irrationalen Zahlen.
+\end{description}
+
+\subsection{Teilmengen von $\R$}
+\todo{gelbes Buch S. 119ff}
+
+\subsection{Mächtigkeit}
+Eine Menge $A$ ist gleichmächtig zu einer Menge $B$, wenn es eine \textit{Bijektion}
+$f: A \rightarrow B$ gibt. Man schreibt dann $|A| = |B|$.
+
+Hat man zwischen zwei Mengen eine Funktion $f: A \rightarrow B$ gefunden, die bijektiv ist,
+so gibt es eine Umkehrfunktion, die ebenfalls Bijektiv ist. Diese bildet jedes Element von $B$
+auf eines aus $A$ ab.
+
+\subsubsection{Abzählbar}
+Eine Menge $A$ ist abzählbar, wenn sie gleichmächtig zur Menge $\N$ (natürliche Zahlen) ist.
+
+\subsubsection{Mächtigkeit zeigen}
+Zu zeigen: $U := \{ 2k + 1: k \in \N \}$ gleichmächtig zu $\N$ ist.
+
+\textbf{Beweis}: Sei $f: \N \rightarrow U$ gegeben durch
+\begin{equation*}
+f(n) = \left\{
+	\begin{array}{l l}
+		n & n \text{ ungerade}\\
+		-n - 1 & n \text{ gerade}
+	\end{array}
+\right.
+\end{equation*}
+
+Diese Funktion ist offensichtlich bijektiv (sonst Umkehrfunktion angeben), wodurch $U$ gleichmächtig $\N$ ist.
+
+\subsubsection{Beispiele}
+\begin{itemize}
+	\item $\N, \Z, \Q$ sind gleichmächtig
+	\item $\R, ]0,1[$ sind gleichmächtig
+	\item $\R$ ist mächtiger (``überabzählbar'') als $\N$
+\end{itemize}
+
 \end{multicols}
