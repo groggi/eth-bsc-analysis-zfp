@@ -1,0 +1,38 @@
+\begin{multicols}{2}
+\section{Mengen}
+
+\subsection{Definitionen}
+\begin{description}
+	\item [Teilmenge:] $A \subseteq B :\Leftrightarrow \forall x: x \in A \rightarrow x \in B$
+	\item [Vereinigung:] $A \cup B := \{x | (x \in A) \lor (x \in B)\}$
+	\item [Durchschnitt:] $A \cap B := \{x | (x \in A) \land (x \in B)\}$
+	\item [Differenz:] $A \backslash B = A - B := \{x | (x \in A) \land (x \not\in B)\}$
+	\item [Komplement:] $A^c = \overline{A} := \{x | x \not\in A\}$
+\end{description}
+
+\subsection{Rechenregeln}
+{\footnotesize
+\begin{tabular}{|l|r|}\hline
+$A \cup B = B \cup A$ & $A \cap B = B \cap A$\\
+$A \cup (B \cup C) = (A \cup B) \cup C$ & $A \cap (B \cap C) = (A \cap B) \cap C$\\
+$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$ & $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$\\
+$(A \cup B)^c = A^c \cap B^c$ & $(A \cap B)^c = A^c \cup B^c$\\
+$(A \backslash B) \cup C = (A \cup C) \cap (B^c \cup C)$ & $(A \backslash B) \cap C = A \backslash )(B \cup C^c)$\\
+$(A \backslash B) \backslash C = A \backslash (B \cup C)$ & $A \backslash B = A \cap B^c$\\\hline
+\end{tabular}
+}
+
+\subsection{Beweise}
+Um Mengengleichungen zu beweisen überführt man üblicherweise eine Seite in eine Form,
+die nur noch aus logischen Operatoren besteht ($\land, \lor, \in, \not\in$) und formt
+dann so um, dass man zur gewünschten anderen Seite kommt durch Rückführung in eine
+Form mit Mengenoperatoren. Dazu verwendet man am einfachsten die Definitionen weiter oben.
+
+\subsection{Beispiel}
+Zu Zeigen: $(A \cup B)^c = A^c \cap B^c$ wobei $A, B, C$ Untermengen von $X$ sind.
+\begin{align*}
+(A \cup B)^c &= \{x \in X: x \not\in (A \cup B)\} = \{x \in X: x \not\in A \land x \not\in B\}\\
+&= \{x \in X: x \not\in A\} \cap \{x \in X: x \not\in B\} = A^c \cap B^c
+\end{align*}
+
+\end{multicols}
