@@ -1,0 +1,28 @@
+\begin{multicols}{2}
+\section{Vollständige Induktion}
+Grundlägende Struktur um die Aussage $A(n)$ zu beweisen:
+\begin{enumerate}
+	\item \textbf{Induktionsanfang/Verankerung:} Die Aussage wird für $n = A$ bewiesen.
+	$A$ ist dabei meistens der erste Wert für die gegebene Eingabemenge.
+	Der Beweis wird meist durch direktes ausrechnen gemacht.
+	\item \textbf{Annahme/Induktionsvoraussetzung:} Hier schreibt man,
+	dass man davon ausgeht die Aussage sei gültig (damit man sie im nächsten Schritt)
+	einsetzen kann. Man kopiert also im Grunde, was man zu beweisen hat mit einigen Zierwörter.
+	\item \textbf{Induktionsschritt:} Für jedes $n \geq A$ wird unter Benutzung der Aussage $A(n)$
+	die Aussage $A(n+1)$ bewiesen. Dazu wird die Induktionsannahme verwendet.
+\end{enumerate}
+
+\subsection{Beispiel}
+Es ist zu beweisen, dass für jedes $n \in \N$ folgendes gilt: $1 + 2 + 3 + \ldots + n = \frac{n(n + 1)}{2}$
+\begin{enumerate}
+	\item \textbf{Verankerung:} Für $n = 1$ gilt $1 = \frac{1 (1 + 1)}{2} = \frac{2}{2} = 1 \quad \checkmark$ 
+	\item \textbf{Annahme:} $1 + 2 + 3 + \ldots + n = \frac{n(n+1)}{2}, \; \forall n \in \N$
+	\item \textbf{Induktionsschritt:}
+	\begin{align*}
+	1 + 2 + \ldots + n + (n+1) \overset{\text{Annahme}}{=} & \frac{n(n+1)}{2} + (n + 1)\\
+	&= \frac{n(n+1)}{2} + \frac{2n + 2}{2} \\
+	&= \frac{n^2 + n + 2n + 2}{2} \\
+	&= \frac{(n + 1)(n + 2)}{2} _\square
+	\end{align*}
+\end{enumerate}
+\end{multicols}
