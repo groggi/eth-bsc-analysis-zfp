@@ -8,7 +8,7 @@
 %% 
 
 
-\documentclass[portrait,a4paper,titlepage]{article}
+\documentclass[portrait,a4paper,titlepage,twocolumn]{article}
 \usepackage[ngerman]{babel}
 
 \input{./../../standard-definitions.tex}
@@ -21,6 +21,7 @@
 
 \begin{document}
 
+\onecolumn
 {\footnotesize
 \begin{multicols}{3}
 \thispagestyle{empty}
@@ -28,22 +29,18 @@
 \tableofcontents
 \end{multicols}
 }
-
+\twocolumn
 \newpage
 \setcounter{page}{1}
 \pagestyle{plain}
 
 \input{induktion.tex}
-\newpage
 \input{mengen.tex}
-\newpage
 \input{funktionen.tex}
-\newpage
 \input{folgen.tex}
-\newpage
 \input{reihen.tex}
 
-\newpage
+\clearpage
 \input{formeltafel.tex}
 
 % fill the page
