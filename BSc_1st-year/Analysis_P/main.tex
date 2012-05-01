@@ -8,7 +8,7 @@
 %% 
 
 
-\documentclass[portrait,a4paper,titlepage,twocolumn]{article}
+\documentclass[a4paper,titlepage,twocolumn]{article}
 \usepackage[ngerman]{babel}
 
 \input{./../../standard-definitions.tex}
@@ -19,6 +19,8 @@
 
 \usepackage{empheq}
 
+\makeindex
+
 \begin{document}
 
 \onecolumn
@@ -28,6 +30,9 @@
 \setcounter{tocdepth}{3}
 \tableofcontents
 \end{multicols}
+
+\idxlayout{columns=4,rule=0.1pt}
+\printindex
 }
 \twocolumn
 \newpage

@@ -1,4 +1,4 @@
-\section{Mengen}
+\section{Mengen}\index{Menge}
 
 \subsection{Definitionen}
 \begin{description}
@@ -43,7 +43,7 @@ Zu Zeigen: $(A \cup B)^c = A^c \cap B^c$ wobei $A, B, C$ Untermengen von $X$ sin
 \end{description}
 
 \subsection{Teilmengen von $\R$}
-\subsubsection{Intervalle}
+\subsubsection{Intervalle}\index{Intervall}
 \begin{tabular}{|l|l|l|}\hline
 Schreibweise & Definition & Bezeichnung\\\hline
 $]a, b[, (a,b)$ & $\{x \in \R | a < x < b\}$ & offen\\\hline
@@ -55,7 +55,7 @@ $[a,b]$ & $\{x \in \R | a \leq x \leq b\}$ & abgeschlossen \\\hline
 Achtung: Ist $a$ oder $b$ ``unendlich'' ($\pm \infty$), so muss es auf der entsprechenden Seite offen sein: z.B. $[a, $\hl{$\infty[$}, \hl{$]-\infty$}$, b[$.
 Unendlich ist keine konkrete Zahl und kann somit nicht gleich einer anderen Zahl sein, was nötig wäre für $\leq$.
 
-\subsubsection{Beschränktheit}
+\subsubsection{Beschränktheit}\index{beschränkt}
 Die Menge $M$ sei eine nicht-leere Teilmenge von $\R$ ($M \subset \R, M \neq \emptyset$).
 
 Die Menge $M$ ist \underline{beschränkt}, wenn $C_1, C_2 \in \R$ existieren, sodass gilt: $\forall x \in M: C_1 \leq x \leq C_2$.
@@ -64,7 +64,7 @@ Die Menge $M$ ist \underline{beschränkt}, wenn $C_1, C_2 \in \R$ existieren, so
 Die Menge $M$ ist \underline{nach oben beschränkt}, wenn $C$ existiert, sodass gilt: $\forall x \in M: x \leq C$. \textit{Nach unten beschränkt} ist
 entsprechend: $\exists C \in \R \; \forall x \in M: C \leq x$.
 
-\subsubsection{Supremum / Infinum}
+\subsubsection{Supremum / Infinum}\index{Supremum}\index{Infinum}\index{Schranke}
 Ist $M \subset \R$ nach oben beschränkt, so nennt man jedes $C$ mit $x \leq C, \forall x \in M$
 eine \underline{obere Schranke} von $M$. Die kleinste obere Schranke (existiert immer in $\R$) nennt man \underline{Supremum} von $M$ ($\sup M$).
 
@@ -93,7 +93,7 @@ $\inf M = a$ gilt genau dann, wenn
 	\item $\forall \epsilon > 0 \; \exists x \in M: x < a + \epsilon$, d.h. $a + \epsilon$ ist keine untere Schranke mehr, egal wie klein man $\epsilon$ auch wählt $\rightarrow$ $a$ ist grösste untere Schranke.
 \end{itemize}
 
-\subsubsection{Archimedisches Prinzip}
+\subsubsection{Archimedisches Prinzip}\index{archimedisches Prinzip}
 \begin{satz}[Archimedisches Prinzip V. 1]
 Zu jeder Zahl $0 < b \in \R$ gibt es ein $n \in \N$ mit $b < n$
 \end{satz}
@@ -106,7 +106,7 @@ Zu den zwei Zahlen $x, y \in \R, \; y > x > 0$ existiert eine Zahl $n \in \N$, s
 
 Geometrisch: Hat man zwei Strecken auf einer Geraden, so kann man die grössere von beiden übertreffen, wenn man die kleinere nur oft genug abträgt.
 
-\subsection{Mächtigkeit}
+\subsection{Mächtigkeit}\index{Mächtigkeit}
 Eine Menge $A$ ist gleichmächtig zu einer Menge $B$, wenn es eine \textit{Bijektion}
 $f: A \rightarrow B$ gibt. Man schreibt dann $|A| = |B|$.
 
@@ -114,7 +114,7 @@ Hat man zwischen zwei Mengen eine Funktion $f: A \rightarrow B$ gefunden, die bi
 so gibt es eine Umkehrfunktion, die ebenfalls Bijektiv ist. Diese bildet jedes Element von $B$
 auf eines aus $A$ ab.
 
-\subsubsection{Abzählbar}
+\subsubsection{Abzählbar}\index{abzählbar}
 Eine Menge $A$ ist abzählbar, wenn sie gleichmächtig zur Menge $\N$ (natürliche Zahlen) ist.
 
 \subsubsection{Gleichmächtigkeit zeigen}

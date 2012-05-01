@@ -2,14 +2,14 @@
 
 \subsection{Definitionen}
 \begin{description}
-  \item[konvergent] $\lim_{x \to \infty} a_n$ existiert
-  \item[divergent] $\lim_{x \to \infty} a_n$ existiert nicht
-  \item[Nullfolge] $\lim_{x \to \infty} a_n = 0$ gilt
+  \item[konvergent] $\lim_{x \to \infty} a_n$ existiert \index{konvergent}
+  \item[divergent] $\lim_{x \to \infty} a_n$ existiert nicht \index{divergent}
+  \item[Nullfolge] $\lim_{x \to \infty} a_n = 0$ gilt \index{Nullfolge}
   \item[beschränkt] Es gibt $C_1, C_2$, so dass gilt $C_1 \leq a_n \leq C_2$
   bzw. $C$ gibt, so dass $|a_n| \leq C$
   \item[unbeschränkt] falls $(a_n)$ nicht beschränkt ist. Unbeschränkte folgen
   sind stets \underline{divergent}
-  \item[monoton wachsend] $a_n \leq a_{n+1} \quad \forall n \in \N$
+  \item[monoton wachsend] $a_n \leq a_{n+1} \quad \forall n \in \N$ \index{monoton}
   \item[streng monoton wachsend] $a_n < a_{n+1} \quad \forall n \in \N$
   \item[monoton fallend] $a_n \geq a_{n+1} \quad \forall n \in \N$
   \item[streng monoton fallend] $a_n > a_{n+1} \quad \forall n \in \N$
@@ -18,7 +18,7 @@
   \infty} a_n = \pm \infty$
 \end{description}
 
-\begin{definition}[Grenzwert]
+\begin{definition}[Grenzwert] \index{Grenzwert}
 	\begin{align*}
 		\lim_{n \to \infty} a_n = a & \Leftrightarrow a_n \to a \\
 		& \Leftrightarrow \forall \epsilon > 0 \exists n_0 \in \N \forall n \geq n_0:
@@ -26,18 +26,18 @@
 	\end{align*}
 \end{definition}
 
-\begin{definition}[Teilfolge]
+\begin{definition}[Teilfolge] \index{Teilfolge}
 Werden von einer Folge beliebig viele Glieder weggelassen, aber nur so viele,
 dass noch unendlich viele übrigbleiben, so erhält man eine Teilfolge.
 \end{definition}
 
-\begin{definition}[Häufungspunkt]
+\begin{definition}[Häufungspunkt] \index{Häufungspunkt}
 	$a$ ist Häufungspunkt der Folge $(a_n)$, wenn in jeder Umgebung von $a$
 	unendlich viele Folgeglieder liegen. Das ist äquivalent damit, dass $a$ der
 	Limes einer Teilfolge von $(a_n)$ ist.
 \end{definition}
 
-\begin{definition}[Limes superior / Limes inferior]
+\begin{definition}[Limes superior / Limes inferior] \index{$\limsup$}\index{$\liminf$}
 	Ist $(a_n)$ eine beschränkte Folge, so heisst der grösste Häufungspunkt Limes
 	superior ($\limsup_{n \to \infty} a_n$ oder $\overline{\lim}_{n \to \infty}
 	a_n$). Der kleinste Häufungspunkt ist der Limes inferior ($\liminf_{n \to
@@ -105,7 +105,7 @@ $\infty$
 	\frac{n}{e} \right )^n \sqrt{2 \pi n} \cdot e^\frac{12}{n}
 \]
 
-\subsection{Konvergenzkriterien}
+\subsection{Konvergenzkriterien}\index{Konvergenzkriterien}
 \begin{align*}
 	a_n \to a \Leftrightarrow a_n - a \to 0 \Leftrightarrow |a_n - a| \to 0
 \end{align*}
@@ -197,7 +197,7 @@ nun verwenden wir den Tipp für Brüche und kürzen das $n$ heraus
 
 \todo{Gelbes Rechenbuch 1, Seiten 163+ mit aufnehmen? Rekursive Folgen und so\ldots}
 
-\subsection{Cauchy-Folgen}
+\subsection{Cauchy-Folgen}\index{Cauchy-Folge}
 \begin{definition}[Cauchy-Folge]
 Sei $(a_n)_{n \in \N}$ eine Folge in $\R$. $(a_n)_{n \in \N}$ heisst \textbf{Cauchy-Folge}, falls gilt
 \begin{align*}
