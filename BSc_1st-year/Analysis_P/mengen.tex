@@ -45,7 +45,16 @@ Zu Zeigen: $(A \cup B)^c = A^c \cap B^c$ wobei $A, B, C$ Untermengen von $X$ sin
 
 \subsection{Teilmengen von $\R$}
 \subsubsection{Intervalle}
-\todo{\ldots}
+\begin{tabular}{|l|l|l|}\hline
+Schreibweise & Definition & Bezeichnung\\\hline
+$]a, b[, (a,b)$ & $\{x \in \R | a < x < b\}$ & offen\\\hline
+$[a, b[, [a, b)$ & $\{x \in \R | a \leq x < b\}$ & (rechts) halboffen \\\hline
+$]a,b], (a, b]$ & $\{x \in \R | a < x \leq b\}$ & (links) halboffen \\\hline
+$[a,b]$ & $\{x \in \R | a \leq x \leq b\}$ & abgeschlossen \\\hline
+\end{tabular}
+
+Achtung: Ist $a$ oder $b$ ``unendlich'' ($\pl \infty$), so muss es auf der entsprechenden Seite offen sein: z.B. $[a, $\hl{$\infty[$}, \hl{$]-\infty$}$, b[$.
+Unendlich ist keine konkrete Zahl und kann somit nicht gleich einer anderen Zahl sein, was nötig wäre für $\leq$.
 
 \subsubsection{Beschränktheit}
 Die Menge $M$ sei eine nicht-leere Teilmenge von $\R$ ($M \subset \R, M \neq \emptyset$).
