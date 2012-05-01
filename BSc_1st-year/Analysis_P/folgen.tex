@@ -196,3 +196,22 @@ nun verwenden wir den Tipp für Brüche und kürzen das $n$ heraus
 \end{align*}
 
 \todo{Gelbes Rechenbuch 1, Seiten 163+ mit aufnehmen? Rekursive Folgen und so\ldots}
+
+\subsection{Cauchy-Folgen}
+\begin{definition}[Cauchy-Folge]
+Sei $(a_n)_{n \in \N}$ eine Folge in $\R$. $(a_n)_{n \in \N}$ heisst \textbf{Cauchy-Folge}, falls gilt
+\begin{align*}
+\forall \epsilon > 0 \; \exists n_n = n_0(\epsilon) \in \N \; \forall n, l \geq n_0: |a_n - a_l| < \epsilon
+\end{align*}
+\end{definition}
+
+Die Definition sagt grundsätzlich aus, dass ab einem $n_0(\epsilon)$ (also einem Anfang $n_0$, der abhängig von $\epsilon$ ist)
+die Folgeglieder nur noch $\epsilon$ Abstand zu einander haben. Also der Abstand beliebig klein wird zwischen Folgegliedern.
+
+\begin{satz}[Cauchy-Kriterium]
+Für $(a_n)_{n \in \N} \subset \R$ sind äquivalent:
+\begin{itemize}
+	\item $(a_n)_{n \in \N}$ ist konvergent
+	\item $(a_n)_{n \in \N}$ ist Cauchy-Folge
+\end{itemize}
+\end{satz}
