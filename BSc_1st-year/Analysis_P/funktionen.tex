@@ -13,6 +13,24 @@ $(g \circ f)(x) = g(f(x))$, eine \underline{Komposition} von $f$ und $g$.
 	\item $f(A \cup B) = f(A) \cup f(B)$
 \end{itemize}
 
+\subsection{Monotonie}
+Die Funktion $f$ ist\ldots
+\begin{description}
+	\item[monoton steigend,] falls aus $x_1 < x_2$ immer $f(x_1) \leq f(x_2)$ folgt
+	\item[streng monoton steigend,] falls aus $x_1 < x_2$ immer $f(x_1) < f(x_2)$ folgt
+	\item[monoton fallend,] falls aus $x_1 < x_2$ immer $f(x_1) \geq f(x_2)$ folgt
+	\item[streng monoton fallend,] falls aus $x_1 < x_2$ immer $f(x_1) > f(x_2)$ folgt
+\end{description}
+
+\subsubsection{Monotonie und Differenzial (Ableitung)}
+Ist $f$ auf dem Intervall $I$ differenzierbar, so gilt
+\begin{itemize}
+	\item $f'(x) > 0 \; \forall x \in I \Rightarrow f$ streng monoton steigend
+	\item $f'(x) \geq 0 \; \forall x \in I \Leftrightarrow f$ monoton steigend
+	\item $f'(x) < 0 \; \forall x \in I \Rightarrow f$ streng monoton fallend
+	\item $f'(x) \leq 0 \; \forall x \in I \Leftrightarrow f$ monoton fallend
+\end{itemize}
+
 \subsection{Identität (identische Abbildung, $\id_X$)}
 Sei $M$ eine Menge, dann ist die \textit{identische Abbildung von $M$} definiert durch:
 $\id_M: M \rightarrow M$ mit $\id_M(x) = x$.
