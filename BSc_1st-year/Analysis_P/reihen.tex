@@ -103,8 +103,34 @@ oder nicht. Sie sagen \underline{nicht} aus, gegen was sie konvergieren!
 \paragraph{Quotientenkriterium}
 \[
 \left| \frac{a_{n+1}}{a_n} \right| \to q. \quad \text{Dann gilt} \begin{cases}
-q < 1 & \Rightarrow \text{Reihe konvergiert absolut} \\
+q < 1 & \Rightarrow \sum_{n=1}^\infty a_n \text{ konvergiert absolut} \\
 q = 1 & \Rightarrow \text{keine Aussage}\\
-q > 1 & \Rightarrow \text{Reihe divergiert}
+q > 1 & \Rightarrow \sum_{n=1}^\infty a_n \text{ divergiert}
 \end{cases}
 \]
+
+\paragraph{Wurzelkriterium}
+\[
+\sqrt[n]{\left | a_n \right |} \to q. \quad \text{Dann gilt} \begin{cases}
+q < 1 & \Rightarrow \sum_{n=1}^\infty a_n \text{ konvergiert absolut}\\
+q = 1 & \Rightarrow \text{keine Aussage}\\
+q > 1 & \Rightarrow \sum_{n=1}^\infty a_n \text{ divergiert}
+\end{cases}
+\]
+
+\paragraph{Leibnizkriterium}
+Wenn gilt:
+\begin{itemize}
+  \item $(a_n)$ ist alternierende Folge, d.h die Vorzeichen wechseln jedes Mal
+  \item $a_n \to 0$ oder $|a_n| \to 0$
+  \item $(|a_n|)$ ist monoton fallend
+\end{itemize}
+\ldots dann konvergiert $\sum_{n=1}^\infty a_n$
+
+\paragraph{Majorantenkriterium}
+Ist $|a_n| \leq b_n$ und $\sum_{n=1}^\infty b_n$ konvergent, so konvergiert
+$\sum_{n=1}^\infty a_n$ absolut.
+
+\paragraph{Minorantenkriterium}
+Ist $a_n \geq b_n \geq 0$ und $\sum_{n=1}^\infty b_n$ divergent, so divergiert
+$\sum_{n=1}^\infty a_n$
