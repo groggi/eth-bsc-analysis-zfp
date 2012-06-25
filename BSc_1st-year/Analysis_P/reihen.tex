@@ -134,3 +134,20 @@ $\sum_{n=1}^\infty a_n$ absolut.
 \paragraph{Minorantenkriterium}
 Ist $a_n \geq b_n \geq 0$ und $\sum_{n=1}^\infty b_n$ divergent, so divergiert
 $\sum_{n=1}^\infty a_n$
+
+\subsection{Potenzreihe}
+Die Potenzreihe hat die allgemeine Form
+\[
+\sum_{n=0}^\infty a_n (x - x_0)^n
+\]
+
+$x_0$ ist der Entwicklungspunkt der Potenzreihe und $(a_n)_{n \in \N}$ eine
+beliebige Folge.
+
+\subsubsection{Konvergenzradius}
+Die Berechnung des Konvergenzradius ist für solche Reihen einfacher, da der
+Faktor $(x - x_0)$ nicht analysiert werden muss. Entsprechend gilt für den
+Konvergenzradius $r$:
+$r = \frac{1}{\limsup_{n\to\infty} \sqrt[n]{\|a_n\|}}$ (Wurzelkriterium) bzw.
+$r = \lim_{n\to\infty} \left | \frac{a_n}{a_{n+1}} \right |$
+(Quotientenkriterium).
