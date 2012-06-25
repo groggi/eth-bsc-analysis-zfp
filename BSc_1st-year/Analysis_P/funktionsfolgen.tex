@@ -1,0 +1,22 @@
+\section{Funktionsfolgen}
+\subsection{Definition}
+Eine Funktionsfolge $(f_n)$ \underline{konvergiert punktweise} auf dem
+Definitionsbereich $I$ gegen $f$, wenn für jedes $x \in I$ gilt $f_n(x) \to f(x)$.
+\[
+\forall \epsilon > 0 \; \forall x \in I \; \exists n_0 \in \N: n \geq n_0
+\Rightarrow |f(x) - f_n(x)| < \epsilon
+\]
+
+Die Folge \underline{konvergiert gleichmässig} auf $I$ gegen $f$, wenn
+$\sup_{x\in I} |f_n(x) - f(x)| \to 0$ gilt. Das bedeutet, dass die obere
+Definition für alle $x$ \underline{dasselbe} $n_0$ verwendet und nicht jeweils
+verschiedene:
+\[
+\forall \epsilon > 0 \; \exists n_0 \in \N \; \forall x \in I: n \geq n_0
+\Rightarrow |f(x) - f_n(x)| < \epsilon
+\]
+
+\underline{Wichtig}: gleichmässige Konvergenz $\Rightarrow$ punktweise
+Konvergenz. Nicht aber andersrum!
+
+\todo{Prüfen was man noch dazu sagen muss}
