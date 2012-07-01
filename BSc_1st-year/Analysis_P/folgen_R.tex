@@ -197,6 +197,16 @@ nun verwenden wir den Tipp für Brüche und kürzen das $n$ heraus
 
 \todo{Gelbes Rechenbuch 1, Seiten 163+ mit aufnehmen? Rekursive Folgen und so\ldots}
 
+\subsubsection{Laufvariable im Exponent}
+$\lim_{x \to 0} (3 - |x|)^{\frac{\sin(x)}{x}}$\newline
+$\Rightarrow (3 - |x|)^{\frac{\sin(x)}{x}} = e^{\frac{\sin(x)}{x} \cdot \ln(3 -
+|x|)}$\newline
+$\Rightarrow 
+\lim_{x \to 0} (3 - |x|)^{\frac{\sin(x)}{x}} = \lim_{x \to 0}e^{\frac{\sin(x)}{x} \cdot \ln(3 -
+|x|)}$\newline
+$\Rightarrow \lim_{x \to 0}\frac{\sin(x)}{x}\cdot \ln(3-|x|) = \ln(3)$\newline
+$\Rightarrow \lim_{x \to 0}(3 - |x|)^{\frac{\sin(x)}{x}} = e^{\ln(3)} = 3$
+
 \subsection{Cauchy-Folgen}\index{Cauchy-Folge}
 \begin{definition}[Cauchy-Folge]
 Sei $(a_n)_{n \in \N}$ eine Folge in $\R$. $(a_n)_{n \in \N}$ heisst \textbf{Cauchy-Folge}, falls gilt
