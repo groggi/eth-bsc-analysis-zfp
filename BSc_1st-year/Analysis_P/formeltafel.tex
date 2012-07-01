@@ -55,34 +55,31 @@ $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{y}{x}$
 \end{itemize}
 
 \subsection{Ableitungen}
-\begin{multicols}{3}
-\begin{tabular}{|c|c|} \hline
-$f$ & $f'$ \\\hline
-$x^n$ & $n x^{n-1}$ \\
-$\frac{1}{x^n}$ & $-n\frac{1}{x^{n+1}}$ \\
-$\sqrt{x}$ & $\frac{1}{2 \sqrt{x}}$ \\
-$\sqrt[n]{x}$ & $\frac{1}{n \sqrt[n]{x^{n-1}}}$ \\
-\hline
-\end{tabular}
-
-\begin{tabular}{|c|c|} \hline
-$e^x$ & $e^x$ \\
-$\ln x$ & $\frac{1}{x}$ \\
-$a^x$ & $a^x \ln a$ \\
-$x^x$ & $x^x (1 + \ln x)$ \\
-$\sin x$ & $\cos x$ \\
-\hline
-\end{tabular}
-
-\begin{tabular}{|c|c|} \hline
-$\cos x$ & $-\sin x$ \\
-$\tan x$ & $\frac{1}{\cos^2 x}$ \\
-$\arcsin x$ & $\frac{1}{\sqrt{1-x^2}}$ \\
-$\arccos x$ & $-\frac{1}{\sqrt{1-x^2}}$ \\
-$\arctan x$ & $\frac{1}{1 + x^2}$ \\
-\hline
-\end{tabular}
-\end{multicols}
+\begin{itemize}[leftmargin=*]
+	\item $\frac{d}{dx}\; x^n = nx^{n-1}$
+	\item $\frac{d}{dx}\; \frac{1}{x^n} = -n \frac{1}{x^{n+1}}$
+	\item $\frac{d}{dx}\; \sqrt[n]{x} = \frac{1}{n\sqrt[n]{x^{n-1}}}$
+	\item $\frac{d}{dx}\; e^{\alpha x + \beta} = \alpha e^{\alpha x + \beta}$
+	\item $\frac{d}{dx}\; \ln(x) = \frac{1}{x}$
+	\item $\frac{d}{dx}\; \alpha^x = \alpha^x \ln(\alpha)$
+	\item $\frac{d}{dx}\; x^x = x^x (1 + \ln(x))$
+	\item $\frac{d}{dx}\; \sin(\alpha x + \beta) = \alpha \cos(\alpha x + \beta)$
+	\item $\frac{d}{dx}\; \cos(\alpha x + \beta) = -\alpha \sin(\alpha x + \beta)$
+	\item $\frac{d}{dx}\; \tan(\alpha x + \beta) = \alpha \frac{1}{\cos^2(\alpha x
+	+ \beta)}$
+	\item $\frac{d}{dx}\; \sinh(\alpha x + \beta) = \alpha \cosh(\alpha x + \beta)$
+	\item $\frac{d}{dx}\; \cosh(\alpha x + \beta) = \alpha \sinh(\alpha x + \beta)$
+	\item $\frac{d}{dx}\; \tanh(\alpha x + \beta) = \alpha
+	\frac{1}{\cosh^2(\alpha x + \beta)}$
+	\item $\frac{d}{dx}\; \arcsin(\alpha x + \beta) =
+	\frac{\alpha}{\sqrt{1-(\alpha x + \beta)^2}}$
+	\item $\frac{d}{dx}\; \arccos(\alpha x + \beta) = -\frac{\alpha}{\sqrt{1 -
+	(\alpha x + \beta)^2}}$
+	\item $\frac{d}{dx}\; \arctan(\alpha x + \beta) = \frac{\alpha}{(\alpha x +
+	\beta)^2 + 1}$
+	\item $\frac{d}{dx}\; x^{x^\alpha} = x^{x^\alpha + \alpha - 1} (\alpha
+	\log(x) + 1)$
+\end{itemize}
 
 \subsection{Integrale}
 \subsubsection{einfache Integralregeln}
