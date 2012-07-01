@@ -1,0 +1,16 @@
+\section{Zwischenwertsatz}
+Sei $f: [a,b] \to \R$ eine stetige reele Funktion, die auf einem Intervall
+definiert ist. Dann existiert zu jedem $u \in [f(a), f(b)]$ (falls $f(a) \leq
+f(b)$, sonst $u \in [f(b), f(a)]$) ein $c \in [a,b]$, sodass gilt: $f(c)= u$.
+
+\subsection{Beispiel (Fixpunkt)}
+Sei $f: [0,1] \to [0,1]$. Zeige: $f$ hat einen Fixpunkt, d.h. es gibt ein $x
+\in [0,1]$ derart, dass $f(x) = x$.
+
+Man erzeugt die Funktion $g: [0,1] \to \R, g(x) := f(x) - x$. Es gilt: $f(x) =
+x \Leftrightarrow g(x) = 0$, d.h. ein Punkt x ist genau dann ein Fixpunkt von
+$f$ wenn er eine Nullstelle von $g$ ist. Es ist zu zeigen, dass $g$ immer eine
+Nullstelle auf $[0,1]$ hat. Als Differenz von zwei stetigen Funktionen ist $g$
+stetig. Weil ausserdem $f(x) \in [0,1] \; \forall x \in [0,1]$ gilt, ist $g(0)
+\geq 0 \geq g(1)$. Da $g$ stetig ist, gibt es daher nach dem Zwischenwertsatz
+ein $x \in [0,1]$ mit $g(x) = 0$ und somit gibt es $f(x) = x$.
