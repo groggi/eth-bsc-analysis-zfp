@@ -1,0 +1,49 @@
+\section{Partialbruchzerlegung}
+Mit dieser Methode wird ein schwieriger Bruch in eine Summe von einfacheren
+Brüchen zerlegt. Damit lässt sich der ursprüngliche Bruch einfacher integrieren.
+
+\begin{enumerate}
+	\item Den Grad des Zählers und des Nenners vergleichen von $R$
+	\begin{enumerate}
+		\item Ist der Zählergrad (über Bruchstrich) grösser oder gleich dem Nennergrad
+		(unter Bruchstrich), so dividiert man den Zähler durch den Nenner. Man erhält
+		daraus das Polynom $P^*$ und möglicherweise einen Rest $R$, sodass gilt: $R =
+		P + R^*$.
+		\item Ist $R^* \equiv 0$, so ist das Verfahren abgeschlossen. Sonst arbeitet
+		man nun mit dem Rest $R^*$ weiter als Bruch, den man ansieht.
+	\end{enumerate}
+	\item Man berechnet die Nullstellen vom Nenner des Bruches.
+	\item Nun setzt man den ursprünglichen Bruch gleich der Summe der
+	Partialbrüche. Die Partialbrüche sind jeweils abhängig von den Nullstellen:
+	\begin{enumerate}
+		\item Für jede einfache reelle Nullstelle $x_i$ ist der Summand
+		$\frac{a_{i1}}{x-x_i}$ zu nehmen
+		\item Für jede $r_i$-fache Nullstelle $x_i$ erhält man $r_i$ Summanden:
+		$\frac{a_{i1}}{x-x_i} + \frac{a_{i2}}{(x-x_i)^2} + \ldots +
+		\frac{a_{ir_i}}{(x-x_i)^{r_i}}$
+	\end{enumerate}
+	\item Nun berechnet man die unbekannten $a_{ij}$ indem man die Partialbrüche
+	gleichnamig macht und dann die Koeffizienten des ursprünglichen Zählers mit
+	denen des gleichnamigen Bruchs vergleicht.
+\end{enumerate}
+
+\subsection{Beispiel}
+$R(x) = \frac{x^2}{x^2-2x+1}$.
+
+Der Zählergrad ist gleich dem Nennergrad,
+weswegen wir eine Polynomdivision durchfüren: $\Rightarrow R(x) = 1 +
+\frac{2x-1}{(x-1)^2}$.
+
+Aus $(x-1)^2$ folgt, das wir nur eine Nullstelle haben $x_0 = 1$. Es handelt
+sich dabei um eine doppelte Nullstelle.
+
+Somit gilt:
+\begin{align*}
+\frac{2x-1}{(x-1)^2} &= \frac{a_1}{x-1} + \frac{a_2}{(x-1)^2}\\
+2x-1 &= a_1(x-1) + a_2\\
+2x-1 &= a_1 x - a_1 + a_2
+\end{align*}
+Daraus folgt, dass $a_1 = 2$ und $a_2 = 1$ (lineares Gleichungssystem).
+
+Somit gilt: $R(x) = \frac{x^2}{x^2-2x+1} = 1 + \frac{2}{x-1} +
+\frac{1}{(x-1)^2}$
