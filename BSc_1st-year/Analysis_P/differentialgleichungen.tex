@@ -1,0 +1,92 @@
+\section{Differentialgleichung (DGL)}
+\subsection{Lineare DGL 1. Ordnung ($y' + f(x) \cdot y = g(x)$)}
+Wenn $g(x) = 0$ ist, dann ist die DGL homogen. Falls $g(x) \neq 0$, so handelt
+es sich um eine inhomogene DGL.
+
+Der erste Schritt für homogene und inhomogene DGL ist die Lösung der homogenen
+DGL: $y' + f(x) \cdot y = 0$:
+{\small
+\begin{align*}
+y' + f(x) \cdot y &= 0 \quad \left | -(f(x) \cdot x) \right.\\
+y' &= -f(x) \cdot y \quad \boxed{y' \text{ ist das gleiche wie } \frac{dy}{dx}}\\
+\frac{dy}{dx} &= -f(x) \cdot y \quad \left | \div y \right.\\
+\frac{dy}{dx\, y} &= -f(x) \quad \left | \int \right.\\
+\int \frac{dy}{dx\, y} dx &= \int -f(x) dx \quad \boxed{\frac{dy}{dx\, y} \cdot dx = \frac{dx}{dx\, y} dy = \frac{1}{y} dy}\\
+\int \frac{1}{y} dy &= \int -f(x) dx\\
+\ln(y) &= -F(x) \quad \left | e^\alpha \right.\\
+e^{\ln(y)} &= e^{-F(x)}\\
+y &= e^{-F(x)}
+\end{align*}
+}
+
+Damit erhalten wir die allgemeine Lösung: $y = A \cdot e^{-F(x)}$. Hat man eine
+homogene DGL und einen Punkt, an dem die ursprüngliche Funktion ausgewertet wurde,
+so kann man die explizite Lösung berechnen (also $A$ berechnen), in dem man die
+hier allgemein erhaltene Lösung für den gegebenen Punkt auswertet und so die
+Unbekannte bekommt.
+
+Für ein inhomogenes DGL setzt sich die allgemeine Lösung aus der homogenen Lösung
+$y_h$ und der partikulären (speziellen) Lösung $y_p$ der inhomogenen DGL zusammen.
+Die homogene Lösung haben wir bereits berechnet: $y_h = A \cdot e^{-F(x)}$. Nun
+folgt die partikuläre Lösung:
+
+Dazu wird die Konstante ($A$) der homogenen Lösung als Funktion dargestellt ($u(x)$).
+Wir erhalten somit: $y_p = u(x) \cdot e^{-F(x)}$.
+Dieses $y_p$ setzten wir nun als $y$ in die inhomogene Gleichung ein:
+{\small
+\[
+y' + f(x) \cdot y = g(x) \Rightarrow (\underbrace{u(x) \cdot e^{-F(x)}}_{= y_p = y})'
++ f(x) \cdot (\underbrace{u(x) \cdot e^{-F(x)}}_{= y_p = y}) = g(x)
+\]
+}
+
+Die neue Gleichung wird nun nach $u'(x) = \ldots$ aufgelöst, was zu
+$u'(x) = \frac{g(x)}{e^{-F(x)}}$ führt. Nun wird $u(x)$ bestimmt durch integrieren
+beider Seiten: $u(x) = \int \frac{g(x)}{e^{-F(x)}}\,dx$. Hat man dies ausgerechnet,
+setzt man $u(x)$ in $y_p = u(x) \cdot e^{-F(x)}$ ein und bekommt so die partikuläre
+Lösung der DGL.
+
+Als letzter Schritt für inhomogene DGL summiert man $y_h$ und $y_p$ und erhält nach
+dem Umformen und Kürzen die allgemeine Lösung der DGL:
+{\small
+\[
+y = y_h + y_p = 
+\underbrace{A \cdot e^{-F(x)}}_{= y_h} +
+\underbrace{\underbrace{\int \frac{g(x)}{e^{-F(x)}}\,dx}_{= u(x)} \cdot e^{-F(x)}}_{= y_p}
+\]
+}
+
+Hat man für die inhomogene DGL ebenfalls Punkte an denen die Funktion ausgewertet wurde,
+so kann man dies in die allgemeine Lösung eintragen und so die Unbekannten ($A$) berechnen.
+
+\subsubsection{Beispiel}
+Gegeben: $y' + x^2 \cdot y = 2x^2$
+
+Homogene DGL lösen: $y' + x^2 \cdot y = 0$
+\begin{align*}
+y' + x^2 \cdot y &= 0\\
+\frac{dy}{dx} + x^2 \cdot y &= 0 \quad | -(x^2 \cdot y)\\
+\frac{1}{dx}\, dy &= -x^2 \cdot y \quad | \div y\\
+\frac{1}{dx} \frac{1}{y} \, dy &= -x^2 \quad | \int\\
+\int \frac{1}{dx} \frac{1}{y} \, dy \, dx &= \int -x^2 \, dx\\
+\int \frac{1}{y}\, dy &= \int -x^2 \, dx\\
+\ln(y) &= -\frac{1}{3} x^3 \quad | e^\alpha\\
+y &= e^{-\frac{1}{3}x^3}
+\end{align*}
+
+Somit ist die allgemeine homogene Lösung: $y_h = A \cdot e^{-\frac{1}{3}x^3}$.
+
+
+Als nächstes gehen wir die praktikuläre Lösung an:
+$y_p = u(x) \cdot e^{-\frac{1}{3}x^3}$
+\begin{align*}
+\Rightarrow (u(x) \cdot e^{-\frac{1}{3}x^3})' + x^2 (u(x) e^{-\frac{1}{3}x^3}) &= 2 x^2\\
+u'(x) \cdot e^{-\frac{1}{3}x^3} - u(x) \cdot x^2 e^{-\frac{1}{3}x^3} + u(x) x^2 e^{-\frac{1}{3}x^3} &= 2 x^2\\
+u'(x) \cdot e^{-\frac{1}{3}x^3} &= 2 x^2 \quad | \div e^{-\frac{1}{3}x^3}\\
+u'(x) &= 2 x^2 e^{\frac{1}{3}x^3} \quad | \int\\
+u(x) &= 2 e^{\frac{1}{3}x^3}
+\end{align*}
+
+Wir erhalten somit: $y_p = 2 e^{\frac{1}{3}x^3} \cdot e^{-\frac{1}{3}x^3} = 2$.
+Die allgemeine Lösung des inhomogenen DGL ist somit:
+$\underline{\underline{y}} = y_h + y_p = \underline{\underline{A \cdot e^{-\frac{1}{3}x^3} + 2}}$
