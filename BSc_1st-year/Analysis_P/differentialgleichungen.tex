@@ -74,7 +74,7 @@ y' + x^2 \cdot y &= 0\\
 y &= e^{-\frac{1}{3}x^3}
 \end{align*}
 
-Somit ist die allgemeine homogene Lösung: $y_h = A \cdot e^{-\frac{1}{3}x^3}$.
+Somit ist die allgemeine homogene Lösung: $\underline{y_h = A \cdot e^{-\frac{1}{3}x^3}}$.
 
 
 Als nächstes gehen wir die praktikuläre Lösung an:
@@ -87,6 +87,120 @@ u'(x) &= 2 x^2 e^{\frac{1}{3}x^3} \quad | \int\\
 u(x) &= 2 e^{\frac{1}{3}x^3}
 \end{align*}
 
-Wir erhalten somit: $y_p = 2 e^{\frac{1}{3}x^3} \cdot e^{-\frac{1}{3}x^3} = 2$.
+Wir erhalten somit: $\underline{y_p} = 2 e^{\frac{1}{3}x^3} \cdot e^{-\frac{1}{3}x^3} = \underline{2}$.
 Die allgemeine Lösung des inhomogenen DGL ist somit:
 $\underline{\underline{y}} = y_h + y_p = \underline{\underline{A \cdot e^{-\frac{1}{3}x^3} + 2}}$
+
+\subsection{Lineare DGL höherer Ordnung}
+Hier geht es um DGL der Form:
+$a_n y^{(n)}+a_{(n-1)}y^{(n-1)}+\ldots+a_1 y'+a_0=g(x)$.
+
+Wieder unterscheiden wir homogene DGL ($g(x) = 0$) und inhomogene DGL ($g(x) \neq 0$).
+
+Als ersten Schritt lösen wir für homogene und inhomogene DGL die homogene Version der DGL:
+$a_n y^{(n)}+a_{(n-1)}y^{(n-1)}+\ldots+a_1 y'+a_0 = 0$. Dazu ersetzen wir $y^{(n)}$ durch
+$\lambda^n \cdot e^{\lambda x}$. Beispielsweise wird aus $a_2 y'' + a_1 y' + y = 0$ wird
+$\lambda^2 e^{\lambda x} + \lambda e^{\lambda x} + e^{\lambda x} = 0$.
+
+Diese neue Gleichung ist das charakteristische Polynom. Von diesem berechnen wir
+als erstes die Nullstellen $\lambda_i$. Wir beachten, dass wir auch komplexe Nullstellen
+miteinbeziehen. Auch merken wir uns die Vielfachheit einer Nullstelle.
+
+Hat man die Nullstellen $\lambda_i$, so lösen für einfache Nullstellen $e^{\lambda_i x}$
+die homogene DGL. Ist die Nullstelle $\lambda_i$ $k$-fach, so lösen
+$e^{\lambda_i x}, x e^{\lambda_i x}, x^2 e^{\lambda_i x}, \ldots, x^{k-1} e^{\lambda_i x}$
+die homogene DGL. Wir erhalten also die allgemeine homogene Lösung in einer ähnlichen Form wie:
+$y_h = C_n e^{\lambda_n x} + 
+\underbrace{C_{n-1} e^{\lambda_{n-1} x} + C_{n-2} x e^{\lambda_{n-1} x}}_{\lambda_{n-1} \text{: 2-fache Nullstelle}} + \ldots + 
+\underbrace{C_3 x^2 e^{\lambda_1 x} + C_2 x e^{\lambda_1 x} + C_1 e^{\lambda_1 x}}_{\lambda_1 \text{: 3-fache Nullstelle}}$.
+
+Ist $\lambda_i$ eine komplexe Nullstelle, so ist $\lambda_i$ der Form $\lambda_i = a + i \cdot b$.
+Zu jeder komplexen Nullstelle gibt es auch eine konjugierte Nullstelle: $\lambda_k = a - i \cdot b$.
+Aus diesem Grund lösen für die komplexe Nullstelle ($\lambda_i$) $e^{x (a + ib)}$ und
+$e^{x (a - ib)}$ das homogene DGL. \underline{Achtung:} Nachfolgend lohnt es sich oft die
+Eulersche Identität zu verwenden: $e^{i \cdot x} = \cos(x) + i \sin(x)$.
+
+Die allgemeine Lösung der homogenen DGL haben wir nun gefunden. Die Unbekannten $C_i$
+können gefunden werden, wenn genügend Punkte gegeben sind, an denen der Funktionswert bekannt ist.
+
+Hat man ursprünglich eine inhomogene DGL vorliegen, so muss man für die allgemeine Lösung
+noch die partikuläre Lösung des inhomogenen DGL berechnen. Dazu werden die Unbekannten
+$C_i$ durch Funktionen $u_i(x)$ ersetzt. So wird aus
+$y_h = C_2 x e^{\lambda_1 x} + C_1 e^{\lambda_1 x} \Rightarrow
+y_p = u_2(x) x e^{\lambda_1 x} + u_1(x) e^{\lambda_1 x}$ (eine doppelte Nullstelle).
+
+Jetzt geht es darum die Funktionen $u_i(x)$ zu bestimmen, um sie in die vorherige
+$y_p$-Gleichung einsetzen zu können. Dazu stellen wir $i$ Gleichungen auf.
+Also so viele, wie wir unbekannte Funktionen $u_i(x)$ haben:
+\begin{align*}
+u_2(x)' (x e^{\lambda_1 x}) + u_1(x)' (e^{\lambda_1 x}) &= 0\\
+u_2(x)' (x e^{\lambda_1 x})' + u_1(x)' (e^{\lambda_1 x})' &= g(x)
+\end{align*}
+
+Das Prinzip ist folgendes: Bis auf die letzte Gleichung, wird gleich $0$ gesetzt.
+Die letzte Gleichung wird gleich $g(x)$ gesetzt.
+Unsere unbekannten Funktionen werden jeweils einmal abgeleitet, egal in welcher
+Gleichung wir sind. Pro Zeile, die man weiter runter geht, wird der Termin mit $e^{\lambda_i x}$
+jeweils einmal mehr abgeleitet. In der ersten Zeile wird zum Beispiel $e^{\lambda_1 x}$ nicht abgeleitet,
+in der nächsten Gleichung wird es einmal abgeleitet. Hätten wir mehr Unbekannte Funktionen,
+so würde in der folgenden Zeile zwei mal abgeleitet werden. Im Allgemeinen gilt also:
+{\footnotesize
+\begin{align*}
+u_1(x)' y_{h1}(x) + u_2(x)' y_{h2}(x) + \ldots + u_n(x)' y_{hn}(x) &= 0\\
+u_1(x)' y_{h1}(x)' + u_2(x)' y_{h2}(x)' + \ldots + u_n(x)' y_{hn}(x)' &= 0\\
+u_1(x)' y_{h1}(x)'' + u_2(x)' y_{h2}(x)'' + \ldots + u_n(x)' y_{hn}(x)'' &= 0\\
+&\ldots\\
+u_1(x)' y_{h1}(x)^{(n-1)} + u_2(x)' y_{h2}(x)^{(n-1)} + \ldots + u_n(x)' y_{hn}(x)^{(n-1)} &= g(x)
+\end{align*}
+}
+
+Diese Gleichungen werden nun jeweils aufgelöst, bis man $u_i(x)$ erhält. Um zu
+$u_i(x)$ zu gelangen, muss auf dem Weg einmal die Gleichung auf beiden Seiten
+integriert werden. Hat man alle $u_i(x)$, so setzt man diese in unsere
+ursprüngliche $y_p$ Gleichung ein.
+
+Nun kann die allgemeine Lösung des inhomogenen DGL berechnet werden. Dazu
+summiert man $y_h$ und $y_p$: $y = y_h + y_p$. Dies ist die allgemeine Lösung.
+Hat man konkrete Punkte, an denen die Funktion ausgewertet wurde, so kann man
+die Unbekannten $C_i$ berechnen.
+
+\subsubsection{Beispiel}
+Es soll $y'' + y = \frac{2}{\cos(x)}$ ausgerechnet werden.
+
+Zuerst sehen wir uns das homogene DGL an:
+\begin{align*}
+y'' + y &= 0\\
+\Rightarrow \lambda^2 e^{\lambda x} + e^{\lambda x} &= 0\\
+\Leftrightarrow e^{\lambda x} (\lambda^2 + 1) &=0 \\
+\Rightarrow \lambda^2 + 1 &= 0\\
+\Leftrightarrow \lambda^2 &= -1 \quad
+\Rightarrow \underline{\lambda_1 = i},\, \underline{\lambda_2 = -i}
+\end{align*}
+
+Somit ist die allgemeine Lösung des homogenen DGL:
+\begin{align*}
+y_h &= C_1 \cdot e^{ix} + C_2 \cdot e^{-ix}\\
+&= C_1 (\cos(x) + i\sin(x)) + C_2(\cos(x) - i\sin(x))\\
+&= \sin(x) \underbrace{(i C_1 + i C_2)}_{ = D_1} + \cos(x) \underbrace{(C_1 + C_2)}_{= D_2}\\
+&= \underline{D_1 \sin(x) + D_2 \cos(x) = y_h}
+\end{align*}
+
+Da es sich um ein inhomogenes DGL handelt, berechnen wir als nächstes die partikuläre
+Lösung:
+\begin{align*}
+y_p &= \underbrace{u_1(x)}_{D_1 \text{ in } y_h} \sin(x) + \underbrace{u_2(x)}_{D_2 \text{ in } y_h} \cos(x)\\
+&\Rightarrow \left|
+	\begin{aligned}
+		u_1(x)' \sin(x) + u_2(x)' \cos(x) &= 0\\
+		u_1(x)' \sin(x)' + u_2(x)' \cos(x)' &= \frac{2}{\cos(x)}
+	\end{aligned}
+\right|\\
+&= \ldots\\
+&\Rightarrow u_1(x)' = -2 \tan(x),\, u_2(x)' = 2\\
+&\Leftrightarrow u_1(x) = 2 \ln(\cos(x)),\, u_2(x) = 2x\\
+&\Rightarrow \underline{y_p = 2 \ln(\cos(x)) \sin(x) + 2x \cos(x)}
+\end{align*}
+
+Da wir nun auch die partikuläre Lösung haben, können wir die allgemeine Lösung
+des inhomogenen DGL berechnen:
+$\underline{\underline{y}} = y_h + y_p = \underline{\underline{D_1 \sin(x) + D_2 \cos(x) + 2 \ln(\cos(x)) \sin(x) + 2x \cos(x)}}$
