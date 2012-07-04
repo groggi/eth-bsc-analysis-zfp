@@ -1,0 +1,68 @@
+\section{Kurvenintegral (Linienintegral)}
+\subsection{1. Art}
+Das Wegintegral einer \underline{stetigen Funktion} $f: \R^n \to \R$ entlang
+eines stetig differenzierbaren Weges $\gamma: [a,b] \to \R^n$ ist definiert durch:
+\[
+\int_\gamma f ds := \int_a^b f(\gamma(t)) \|\gamma(t)'\|_2 dt
+\]
+
+\underline{Euklidische Norm}: $\|\vec{a}\|_2 = \sqrt{a_x^2 + a_y^2 + \ldots}$.
+Achtung: Beim Integral muss man zuerst $\gamma(t)$ nach $t$ ableiten und erst
+dann die Norm davon berechnen!
+
+\subsubsection{Beispiel}
+\todo{\ldots}
+
+\subsection{2. Art}
+Das Wegintegral über ein \underline{stetiges Vektorfeld} $\vec{f}: \R^n \to \R^n$
+entlang eines stetig differenzierbaren Weges $\gamma: [a,b] \to \R^n$ ist definiert
+durch:
+\[
+\int_\gamma \vec{f}(\vec{x}) d\vec{x} := \int_a^b \left< \vec{f}(\gamma(t)), \gamma(t)' \right> dt
+\]
+
+\underline{Skalarprodukt}: $\left< \vec{a}, \vec{b} \right> = a_x b_x + a_y b_y + \ldots$
+
+\subsubsection{Beispiel}
+\todo{\ldots}
+
+\subsection{Parametrisierung von Kurven}
+Grundlägender Tipp: Skizze machen, um Grenzen und Kurve besser zu verstehen und
+schneller auf die Parametrisierung zu kommen.
+
+\begin{itemize}[leftmargin=*]
+	\item Wenn die Kurve in der Form
+	\[
+	C = \{\vec{r} \in \R^n | \vec{r} = \gamma(t), a \leq t \leq b\}
+	\]
+	bereits gegeben, so ist klar, dass $\gamma(t)$ der Weg ist und das Integral von
+	$a$ nach $b$ verläuft.
+	
+	\item Die Paramtrisierung einer \underline{Strecke} von $\vec{a}$ nach $\vec{b}$:
+	$\gamma(t) = \vec{a} + t(\vec{b}-\vec{a}), \quad 0 \leq t \leq 1$
+	
+	\item Die Parametrisierung eines \underline{Kreises} mit Mittelpunkt $(x_0, y_0)$ und
+	Radius $r$ ist: $\gamma(t) =
+	\begin{pmatrix}
+	x_0 + r \cos(t)\\
+	y_0 + r \sin(t)
+	\end{pmatrix}$. Für einen vollen Kreis gilt $0 \leq t \leq 2\pi$, für Kreisteile
+	schränkt man diesen Intevall entsprechend ein.
+	
+	\item Parametrisierung eines \underline{Graphen} der Funktion $f(x)$ für $x$
+	zwischen $a$ und $b$: $\gamma(t) =
+	\begin{pmatrix}
+	t\\
+	f(t)
+	\end{pmatrix}, \quad a \leq t \leq b$
+\end{itemize}
+
+\subsection{Berechnung}
+Die Berechnung findet in drei Schritten statt:
+\begin{enumerate}[leftmargin=*]
+	\item Parametrisierung der Kurve $C$ als $C = \{\vec{r} \in \R^n | \vec{r} = \gamma(t), a \leq t \leq b\}$
+	\item Einsetzen ins Integral: $\int_C f(\vec{r})\,ds = \int_a^b f(\gamma(t)) \|\gamma(t)'\|\,dt$.
+	Man setzt also für die Variabeln von $f$ die Komponenten von $\gamma$ ein und
+	multipliziert dies dann mit dem Betrag der Ableitung nach $t$ von $\gamma$.
+	\item Integral ausrechnen.
+\end{enumerate}
