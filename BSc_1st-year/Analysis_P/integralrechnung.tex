@@ -18,7 +18,14 @@ $\int F'(g(x)) g'(x)dx = F(g(x))$
 	\item Ersetze im Ergebnis $u$ durch $g(x)$
 \end{enumerate}
 
-\paragraph{Beispiel}
+\paragraph{Beispiel 1}
+Das Integral $\int_{-2}^1 x^2 \,dx$ berechnet die blaue Fläche die durch die Funktion $f(x) = x^2$ beschränkt wird.
+$F(x)$ sei die Stammfunktion von $f(x)$,  generell berechnen wir $\int x^y \,dx = \frac{x^{(y+1)}}{y+1}$, somit $F(x) = \frac{x^3}{3}$.
+Somit $\int_{-2}^1 x^2 \,dx = F(x) \left |_{-2}^1 \right. = F(1) - F(-2) =  \frac{1^3}{3} -  \frac{-2^3}{3} = \frac{1}{3} +  \frac{8}{3} = 3.$
+
+\includegraphics[scale=1]{integral_x2.png}
+
+\paragraph{Beispiel 2}
 $\int_0^2 x \sqrt{x+1}^3 \,dx$
 
 Die Wurzel wird substituiert: $u = g(x) = \sqrt{x+1}$.
