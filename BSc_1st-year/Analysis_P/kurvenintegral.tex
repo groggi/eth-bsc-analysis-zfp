@@ -1,4 +1,5 @@
 \section{Kurvenintegral (Linienintegral)}
+In den Übungen sind nur immer Integrale der zweiten Art vorgekommen. 
 \subsection{1. Art}
 Das Wegintegral einer \underline{stetigen Funktion} $f: \R^n \to \R$ entlang
 eines stetig differenzierbaren Weges $\gamma: [a,b] \to \R^n$ ist definiert durch:
@@ -24,7 +25,29 @@ durch:
 \underline{Skalarprodukt}: $\left< \vec{a}, \vec{b} \right> = a_x b_x + a_y b_y + \ldots$
 
 \subsubsection{Beispiel}
-\todo{\ldots}
+%Beispiel Analysis II Serie 11 4a)
+Berechne des Linienintegral $\int_\gamma \vec{K} d\vec{x} $ für $ \vec{K}(x,y) = (x^2+y, 2xy)$ und $\gamma$ als Einheitskreis mit positivem Umlaufsinn.
+Gegeben:
+\begin{align*}
+\vec{K}(x,y) &= (x^2+y, 2xy) \\
+\gamma &: [0,2\pi]  \to \R^2\\
+\gamma &: x \mapsto   (cos(t), sin(t)) 
+\end{align*}
+Zu berechnen:
+\begin{eqnarray*}
+\gamma(t)' &=& (-sin(t),cos(t))\\
+\vec{K}(\gamma(t)') &=& (cos^2(t) + sin(t), 2 cos(t)sin(t))\\
+\left< \vec{K}(\gamma(t)), \gamma(t)' \right> &=& -cos^2(t)sin(t) - sin^2(t) + 2cos^2(t)sin(t)\\
+ &=& cos^2(t)sin(t) - sin^2(t)
+\end{eqnarray*}
+\begin{eqnarray*}
+\int_\gamma \vec{K} d\vec{x} &=& \int_0^{2\pi} \left< \vec{K}(\gamma(t)), \gamma(t)' \right> dt\\
+&=& \int_0^{2\pi} cos^2(t)sin(t) - sin^2(t) dt\\
+&=& \left. -\frac{1}{3}cos^3(t) - \frac{1}{2}t + sin(t)cos(t) \right|_0^{2\pi} = \underline{\pi}
+\end{eqnarray*}
+
+
+
 
 \subsection{Parametrisierung von Kurven}
 Grundlägender Tipp: Skizze machen, um Grenzen und Kurve besser zu verstehen und
