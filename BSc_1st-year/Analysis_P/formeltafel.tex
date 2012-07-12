@@ -322,3 +322,17 @@ $\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} - 1 = 0$.
   \item $\log_a (x-y) = \log_a x + \log_a (1- \frac{y}{x})$
 \end{itemize}
 
+\subsection{Wichtige Grenzwerte}
+			
+\begin{itemize}[leftmargin=*]
+  \item $ \lim\limits_{n \to \infty} \left( 1+\frac{x}{n} \right)^n = e^x \quad $
+  \item $ \lim\limits_{n \to \infty} \sqrt[n]{n} = 1 $ 
+  \item  $ \lim\limits_{x \to 0} \frac{a^x-1}{x} = \ln a $ 
+  \item $ \lim\limits_{x \to 0} \frac{\sin(x)}{x} = 1 $ 
+  \item $ \lim\limits_{x \to 0} \frac{1-\cos(x)}{x} = 0 \quad $ 
+  \item  $ \lim\limits_{x \to 0} \frac{\log_a(1+x)}{x} = \frac{1}{\ln a} $
+  \item $ \lim\limits_{n \to \infty} n^p q^n = 0 \qquad p \in \N \text{ und } 0 < q < 1 $
+  \item $ \lim\limits_{x \to 0} x^\alpha \ln x = 0 \qquad \alpha > 0 $
+  \item $ \lim\limits_{n \to \infty} \sqrt{x^2-x}-x = \frac{1}{2}$ (Lösungsansatz mit Taylorreihe ($\sqrt{1-x} = 1 + \frac{x}{2}+O(x^2)$): $\sqrt{x^2-x}-x = x(\sqrt{1-\frac{1}{x}}-1) = x((1+\frac{1}{2x}+O(\frac{1}{x^2}))-1) = \frac{1}{2}+O(\frac{1}{x}) \underset{n \to \infty}{\longrightarrow} \frac{1}{2} $ )
+\end{itemize}
+
