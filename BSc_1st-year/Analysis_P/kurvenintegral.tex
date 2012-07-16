@@ -53,8 +53,8 @@ Es sei die Schraubenlinie (Spirale in 3D)
 \]
 und $f(x,y,z) := x^2 + y^2 + z^2$ gegeben. Wir berechnen $\int_\gamma f ds$. Zunächst bestimmen wir
 \begin{align*}
-\|\gamma(t)'\|_2 &= \left[\frac{d(cos t)}{dt}\right]^2 + \left[\frac{d(sin t)}{dt}\right]^2 + \left[\frac{dt}{dt}\right]^2 \\
-&=  sin^2(t)+cos^2(t)+1=2
+\|\gamma(t)'\|_2 &= \sqrt{\left[\frac{d(cos t)}{dt}\right]^2 + \left[\frac{d(sin t)}{dt}\right]^2 + \left[\frac{dt}{dt}\right]^2} \\
+&= \sqrt{ sin^2(t)+cos^2(t)+1}=\sqrt{2}
 \end{align*}
 Dann substituieren wir x,y und z und erhalten
 \[
