@@ -95,21 +95,23 @@ $\underline{\underline{y}} = y_h + y_p = \underline{\underline{A \cdot e^{-\frac
 Direkterer Lösungsweg\\
 Gegeben: $y' + x^2 \cdot y = 2x^2$.
 Direkt lösen:
-\begin{align*}
+\begin{equation}
+\begin{array}{r l |l}
 y' + x^2 \cdot y &= 2x^2\\
-\frac{dy}{dx} + x^2 \cdot y &= 2x^2 \quad &| -(x^2 \cdot y)\\
-\frac{dy}{dx} &= 2x^2 -x^2 \cdot y \quad &| \text{vereinfachen}\\
-\frac{dy}{dx} &= x^2 ( 2 - y) \quad &| \div 2 - \cdot y \\
-\frac{\frac{dy}{dx}}{2 - y} &= x^2  &| \int \text{ with respect to } x \\
-\int \frac{\frac{dy}{dx}}{2 - y}  \, dx &= \int x^2 \, dx &| \text{links: } \int \frac{g'(x)}{g(x)} \, dx = \ln|g(x)|\\ %%= \ln|g(x)|
-- ln |2 - y| &= \frac{x^3}{3} + c_1 &| \cdot -1 \\
-ln |2 - y| &= - \frac{x^3}{3} - c_1 &| e \\
+\frac{dy}{dx} + x^2 \cdot y &= 2x^2 \quad & -(x^2 \cdot y)\\
+\frac{dy}{dx} &= 2x^2 -x^2 \cdot y \quad & \text{vereinfachen}\\
+\frac{dy}{dx} &= x^2 ( 2 - y) \quad & \div (2 - y) \\
+\frac{\frac{dy}{dx}}{2 - y} &= x^2  & \int \text{ with respect to } x \\
+\int \frac{\frac{dy}{dx}}{2 - y}  \, dx &= \int x^2 \, dx & \text{links: } \int \frac{g'(x)}{g(x)} \, dx = \ln|g(x)|\\ 
+- ln |2 - y| &= \frac{x^3}{3} + c_1 & \cdot (-1) \\
+ln |2 - y| &= - \frac{x^3}{3} - c_1 & e \\
 e^{ln |2 - y|} &= e^{-\frac{1}{3}x^3 - c_1 } \\
-2 - y &= e^{-\frac{1}{3}x^3 - c_1 }&| - 2 \\
-- y &= e^{-\frac{1}{3}x^3 - c_1 } - 2 &| \cdot -1\\
-y &= - e^{-\frac{1}{3}x^3 - c_1 } + 2 &| \text{replace const} \\
+2 - y &= e^{-\frac{1}{3}x^3 - c_1 }& - 2 \\
+- y &= e^{-\frac{1}{3}x^3 - c_1 } - 2 & \cdot (-1)\\
+y &= - e^{-\frac{1}{3}x^3 - c_1 } + 2 & \text{replace const} \\
 \underline{\underline{y}} &= \underline{\underline{c_2 \cdot e^{-\frac{1}{3}x^3} + 2}}\\
-\end{align*}
+\end{array} 
+\end{equation}
 
 
 \subsection{Lineare DGL höherer Ordnung}
