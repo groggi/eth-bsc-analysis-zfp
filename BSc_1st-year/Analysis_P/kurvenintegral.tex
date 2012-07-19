@@ -98,8 +98,39 @@ schneller auf die Parametrisierung zu kommen.
 	\begin{pmatrix}
 	t\\
 	f(t)
-	\end{pmatrix}, \quad a \leq t \leq b$
+	\end{pmatrix}, \quad a \leq t \leq b$. \underline{Achtung:} Hat man zwei
+	Graphen, die als Grenzen für das Kurvenintegral fungieren, so schliessen diese
+	gemeinsam eine Fläche ein. Die Umlaufrichtung ist so zu wählen, dass diese
+	Fläche jeweils links liegt.
 \end{itemize}
+
+\subsubsection{Beispiel: Kurvenintegral mit zwei Grenzgraphen}
+% Analysis 2, Serie 12, Aufgabe 2b
+Es soll das Kurvenintegral $\int_\gamma K(x,y)\;dt = \int_\gamma
+\begin{pmatrix}
+x^2 - y^2\\
+2y -x
+\end{pmatrix}\;dt$ berechnet werden. $\gamma$ ist der Rand des beschränkten
+Gebietes im ersten Quadranten, welches durch die Graphen $y=x^2$ und $y=x^3$ begrenzt
+wird.
+
+Lösung: Man macht eine Skizze der Grenzen ($y=x^2$ und $y=x^3$) und sieht, dass
+diese eine Fläche einschliessen. Die Schnittpunkte sind $x = 0$ und $x = 1$. Der
+Rand dieses Gebiets besteht also aus den beiden parametrisierten Kurven
+(Parametrisierung für Graphen verwenden)
+\begin{align*}
+\gamma_1(t) &= \begin{pmatrix}t\\t^3\end{pmatrix} & t \in [0,1]\\
+\gamma_2(t) &= \begin{pmatrix}t\\t^2\end{pmatrix} & t \in [0,1]
+\end{align*}
+
+Wir sehen, dass die eingeschlossene Fläche in Durchlaufrichtung von $\gamma_1$
+links liegt, was soweit gut ist. Bei $\gamma_2$ liegt die Fläche aber auf der
+rechten Seite, weshalb wir die Durchlaufrichtung drehen müssen, was zu $\gamma
+= \gamma_1 - \gamma_2$ führt (man beachte das Minus statt einem Plus).
+
+Jetzt muss nur noch ganz normal das Wegintegral berechnet werden: $\int_\gamma
+K\;dx = \int_{\gamma_1} K\;dx + \int_{-\gamma_2} K\;dx = \int_{\gamma_1} K\;dx -
+\int_{\gamma_2} K\;dx = \ldots$
 
 \subsection{Berechnung}
 Die Berechnung findet in drei Schritten statt:
