@@ -3,31 +3,17 @@ $\lim_{x \to a} f(x) = b$ bedeutet, dass die Funktion $f$ für $x \to a$ den
 Grenzwert $b$ hat. Der Funktionswert nähert sich also immer näher an $b$ heran,
 wenn $x$ sich $a$ annähert.
 \[
-\forall \epsilon > 0 \; \exists \delta > 0: 0 < |x -a| < \delta \Rightarrow
-|f(x) - f(a)| < \epsilon
+\forall \epsilon > 0 \; \exists \delta > 0: \|x -a\| < \delta \Rightarrow
+\|f(x) - f(a)\| < \epsilon
 \]
 
 Funktionsfolgen verhalten sich desweiteren wie Folgen. Es gelten also die
 gleichen Eigenschaften.
 
-\subsection{Regel von de l'Hospital}
-Sei $a \in \R \cup \{\infty, -\infty\}$. Es hat zu gelten:
-\begin{itemize}
-  \item $\lim_{x \to a} f(x) = \lim_{x \to a} g(x) = 0 \text{ oder } \pm\infty$
-  \item In der Nähe von $a$ ist $g'(x) \neq 0$
-\end{itemize}
-
-Dann ist
-\[
-\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a}
-\frac{f'(x)}{g'(x)}
-\]
-
-Diese Regel kann man mehrfach anwenden hintereinander. \underline{Achtung:} Es
-kann sein, dass der Limes $\lim_{x \to a} \frac{f'(x)}{g'(x)}$ nicht existiert,
-aber von $\lim_{x \to a} \frac{f(x)}{g(x)}$ trotzdem.
-
 \subsection{(Punktweise) Stetigkeit}
+Die Definition für punktweise Stetigkeit ist die gleiche, wie die für
+$\lim_{x \to a} f(x) = b$ (siehe die Definition gerade über diesem Kapitel).
+
 Charakterisierungen der Stetigkeit von $f$ im Punkt $a$:
 \begin{itemize}
 	\item $\lim_{x \to a} f(x) = f(a)$ ist die Definition
@@ -69,7 +55,7 @@ Funktionswerte müsste aber kleiner als das vorgegebene $\epsilon$ bleiben.
 Eine Funktion $f: \R \to \R$ ist Lipschitz-stetig, wenn eine Konstante $L$
 existiert, so dass gilt:
 \[
-\forall x_1,x_2 \in \R: |f(x_1) - f(x_2)| \leq L \cdot |x_1 - x_2|
+\forall x_1,x_2 \in \R: \|f(x_1) - f(x_2)\| \leq L \cdot \|x_1 - x_2\|
 \]
 
 \subsection{Abhängigkeit der Stetigkeitsbegriffe}
@@ -77,3 +63,20 @@ Sei $f$ eine reelle Funktion, so gilt:
 
 $f$ Lipschitz-stetig $\Rightarrow$ $f$ absolut stetig $\Rightarrow$ $f$
 gleichmässig stetig $\Rightarrow$ $f$ (punktweise) stetig.
+
+\subsection{Regel von de l'Hospital}
+Sei $a \in \R \cup \{\infty, -\infty\}$. Es hat zu gelten:
+\begin{itemize}
+  \item $\lim_{x \to a} f(x) = \lim_{x \to a} g(x) = 0 \text{ oder } \pm\infty$
+  \item In der Nähe von $a$ ist $g'(x) \neq 0$
+\end{itemize}
+
+Dann ist
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a}
+\frac{f'(x)}{g'(x)}
+\]
+
+Diese Regel kann man mehrfach anwenden hintereinander. \underline{Achtung:} Es
+kann sein, dass der Limes $\lim_{x \to a} \frac{f'(x)}{g'(x)}$ nicht existiert,
+aber von $\lim_{x \to a} \frac{f(x)}{g(x)}$ trotzdem.
