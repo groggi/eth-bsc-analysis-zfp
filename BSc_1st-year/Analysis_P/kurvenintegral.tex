@@ -18,19 +18,21 @@ Gegeben:
 \begin{align*}
 \vec{K}(x,y) &= (x^2+y, 2xy) \\
 \gamma &: [0,2\pi]  \to \R^2\\
-\gamma &: t \mapsto   (cos(t), sin(t)) 
+\gamma &: t \mapsto   (\cos(t), \sin(t)) 
 \end{align*}
 Zu berechnen:
 \begin{eqnarray*}
-\gamma(t)' &=& (-sin(t),cos(t))\\
-\vec{K}(\gamma(t)') &=& (cos^2(t) + sin(t), 2 cos(t)sin(t))\\
-\left< \vec{K}(\gamma(t)), \gamma(t)' \right> &=& -cos^2(t)sin(t) - sin^2(t) + 2cos^2(t)sin(t)\\
- &=& cos^2(t)sin(t) - sin^2(t)
+\gamma(t)' &=& (-\sin(t),\cos(t))\\
+\vec{K}(\gamma(t)) &=& (\cos^2(t) + \sin(t), 2 \cos(t)\sin(t))\\
+\left< \vec{K}(\gamma(t)), \gamma(t)' \right> &=& -\cos^2(t)\sin(t) - \sin^2(t)
++ 2\cos^2(t)\sin(t)\\
+ &=& \cos^2(t)\sin(t) - \sin^2(t)
 \end{eqnarray*}
 \begin{eqnarray*}
 \int_\gamma \vec{K} d\vec{x} &=& \int_0^{2\pi} \left< \vec{K}(\gamma(t)), \gamma(t)' \right> dt\\
-&=& \int_0^{2\pi} cos^2(t)sin(t) - sin^2(t) dt\\
-&=& \left. -\frac{1}{3}cos^3(t) - \frac{1}{2}t + sin(t)cos(t) \right|_0^{2\pi} = \underline{\pi}
+&=& \int_0^{2\pi} \cos^2(t)\sin(t) - \sin^2(t) dt\\
+&=& \left. -\frac{1}{3}\cos^3(t) - \frac{1}{2}t + \sin(t)\cos(t)
+\right|_0^{2\pi} = \underline{\underline{-\pi}}
 \end{eqnarray*}
 
 
@@ -49,16 +51,17 @@ dann die Norm davon berechnen!
 % Beispiel von http://www.tu-ilmenau.de/fileadmin/media/num/neundorf/Dokumente/Lehre/hm/Kurven_Integral.pdf Seite 2
 Es sei die Schraubenlinie (Spirale in 3D)
 \[
-\gamma : [0,2\pi]  \to \R^3, \gamma : t \mapsto  (cos(t), sin(t), t) 
+\gamma : [0,2\pi]  \to \R^3, \gamma : t \mapsto  (\cos(t), \sin(t), t) 
 \]
 und $f(x,y,z) := x^2 + y^2 + z^2$ gegeben. Wir berechnen $\int_\gamma f ds$. Zunächst bestimmen wir
 \begin{align*}
-\|\gamma(t)'\|_2 &= \sqrt{\left[\frac{d(cos t)}{dt}\right]^2 + \left[\frac{d(sin t)}{dt}\right]^2 + \left[\frac{dt}{dt}\right]^2} \\
-&= \sqrt{ sin^2(t)+cos^2(t)+1}=\sqrt{2}
+\|\gamma(t)'\|_2 &= \sqrt{\left[\frac{d(\cos t)}{dt}\right]^2 +
+\left[\frac{d(\sin t)}{dt}\right]^2 + \left[\frac{dt}{dt}\right]^2} \\
+&= \sqrt{\sin^2(t)+\cos^2(t)+1}=\sqrt{2}
 \end{align*}
 Dann substituieren wir x,y und z und erhalten
 \[
-f(x,y,z) = f(\gamma(t)) = sin^2(t)+cos^2(t)+t^2 = 1 +t^2
+f(x,y,z) = f(\gamma(t)) = \sin^2(t)+\cos^2(t)+t^2 = 1 +t^2
 \]
 auf $\gamma$. Das führt zu
 \begin{align*}
@@ -95,8 +98,39 @@ schneller auf die Parametrisierung zu kommen.
 	\begin{pmatrix}
 	t\\
 	f(t)
-	\end{pmatrix}, \quad a \leq t \leq b$
+	\end{pmatrix}, \quad a \leq t \leq b$. \underline{Achtung:} Hat man zwei
+	Graphen, die als Grenzen für das Kurvenintegral fungieren, so schliessen diese
+	gemeinsam eine Fläche ein. Die Umlaufrichtung ist so zu wählen, dass diese
+	Fläche jeweils links liegt.
 \end{itemize}
+
+\subsubsection{Beispiel: Kurvenintegral mit zwei Grenzgraphen}
+% Analysis 2, Serie 12, Aufgabe 2b
+Es soll das Kurvenintegral $\int_\gamma K(x,y)\;dt = \int_\gamma
+\begin{pmatrix}
+x^2 - y^2\\
+2y -x
+\end{pmatrix}\;dt$ berechnet werden. $\gamma$ ist der Rand des beschränkten
+Gebietes im ersten Quadranten, welches durch die Graphen $y=x^2$ und $y=x^3$ begrenzt
+wird.
+
+Lösung: Man macht eine Skizze der Grenzen ($y=x^2$ und $y=x^3$) und sieht, dass
+diese eine Fläche einschliessen. Die Schnittpunkte sind $x = 0$ und $x = 1$. Der
+Rand dieses Gebiets besteht also aus den beiden parametrisierten Kurven
+(Parametrisierung für Graphen verwenden)
+\begin{align*}
+\gamma_1(t) &= \begin{pmatrix}t\\t^3\end{pmatrix} & t \in [0,1]\\
+\gamma_2(t) &= \begin{pmatrix}t\\t^2\end{pmatrix} & t \in [0,1]
+\end{align*}
+
+Wir sehen, dass die eingeschlossene Fläche in Durchlaufrichtung von $\gamma_1$
+links liegt, was soweit gut ist. Bei $\gamma_2$ liegt die Fläche aber auf der
+rechten Seite, weshalb wir die Durchlaufrichtung drehen müssen, was zu $\gamma
+= \gamma_1 - \gamma_2$ führt (man beachte das Minus statt einem Plus).
+
+Jetzt muss nur noch ganz normal das Wegintegral berechnet werden: $\int_\gamma
+K\;dx = \int_{\gamma_1} K\;dx + \int_{-\gamma_2} K\;dx = \int_{\gamma_1} K\;dx -
+\int_{\gamma_2} K\;dx = \ldots$
 
 \subsection{Berechnung}
 Die Berechnung findet in drei Schritten statt:
