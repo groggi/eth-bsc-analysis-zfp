@@ -1,5 +1,34 @@
 \section{Differentialgleichung (DGL)}
 \subsection{Lineare DGL 1. Ordnung ($y' + f(x) \cdot y = g(x)$)}
+\subsubsection{Variation der Konstanten}
+%Nach http://de.wikipedia.org/wiki/Variation_der_Konstanten#Motivation
+Sei:\[
+F(x) = \int f(t) dt.
+\]
+Dann ist $\{y_{Hom}(x) = c_1e^{F(x)}| c_1 \in \R\}$ die Menge aller Lösungen der homogenen Differnentialgleichung ($y' + f(x) \cdot y = 0$). Als Ansatz für die Lösung des inhomogenen Problems setze man $y_p(x) = u(x)e^{F(x)}$, d.h. man \textit{lässt die Konstante $c_1$ variieren}. Dies ergibt eine eindeutige Zuordnung zwischen den Funktion $y$ und $u$. Denn $e^{F(x)}$ ist eine stets positive, stetig differnezierbare Funktion. Die Ableitung dieser Ansatzfunktion ist \[
+y_p'(x) = u(x)f(x)e^{F(x)} + u'(x)e^{F(x)} = y(x)f(x) + u'(x)e^{F(x)}
+\]
+Also löst $y$ die inhomogene Differntialgleichung \[
+y_p'(x) = y(x)f(x) + g(x)
+\]
+genau dann, wenn\[
+u'(x) = y(x)f(x) + g(x)
+\]
+gilt. Also folgt\[
+u(x) = \int  g(t)e^{-F(t)} dt
+\]
+Somit ist die Lösungsmenge von $y_p$
+\[
+\{ y_p'(x) = e^{F(x)} (u(x) + c_2) | c_2 \in \R \}
+\]
+Die Lösungsmenge der generellen Lösung der allgemeinen Lösung ist somit $y$\[
+\{y\}=\{y = y_Hom + y_p\} = \{ y(x) =  c_1e^{F(x)} +  e^{F(x)} (u(x) + c_2) | c_1, c_2 \in \R \}
+\]
+Gibt es nun einen Ansatz, kann diese menge durch Einsetzen des Funktionswert und Gleichsetzen mit dem Resultat genau bestummen werde in dem die Konstanten $c$  aufgelöst werden.\\
+\\
+Konkret reicht es also aus. $F$ und $u$ zu berechnen. 
+
+\subsubsection{genereller Ansatz}
 Wenn $g(x) = 0$ ist, dann ist die DGL homogen. Falls $g(x) \neq 0$, so handelt
 es sich um eine inhomogene DGL.
 
@@ -59,7 +88,48 @@ y = y_h + y_p =
 Hat man für die inhomogene DGL ebenfalls Punkte an denen die Funktion ausgewertet wurde,
 so kann man dies in die allgemeine Lösung eintragen und so die Unbekannten ($A$) berechnen.
 
-\subsubsection{Beispiel}
+\subsubsection{Beispiel mit Variation der Konstanten}
+%Nach http://de.wikipedia.org/wiki/Variation_der_Konstanten#Motivation
+Gegeben: $y' + x^2 \cdot y = 2x^2$\\
+Somit:  $y' = f(x) \cdot y + g(x)$ mit $g(x) := 2x^2$ und $f(x) :=  - x^2$\\
+Es gilt somit:\[
+F(x) = \int f(t) dt. =  \int - x^2 dt. = -\frac{x^3}{3}
+\]
+Dann ist \[
+\{y_{Hom}(x) = c_1e^{-\frac{x^3}{3}}| c_1 \in \R\}
+\] die Menge aller Lösungen der homogenen Differnentialgleichung ($y' + x^2\cdot y = 0$). \\
+
+\fbox{%
+        \parbox{1\linewidth}{%
+\textit{Dieser Teil muss nicht berechnet werden (Herleitung).}\\
+Als Ansatz für die Lösung des inhomogenen Problems setze man $y_p(x) = u(x)e^{F(x)}$.
+\\
+Ansatzfunktion ist \[
+y_p'(x) = u(x)f(x)e^{F(x)} + u'(x)e^{F(x)} = y(x)f(x) + u'(x)e^{F(x)}
+\]
+Also löst $y$ die inhomogene Differntialgleichung \[
+y_p'(x) = y(x)f(x) + g(x)
+\]
+genau dann, wenn\[
+u'(x) = y(x)f(x) + g(x)
+\]
+gilt.
+        }%
+}
+
+Also folgt\[
+u(x) = \int  g(t)e^{-F(t)} dt. =  2 \int  x^2e^{\frac{x^3}{3}} dt. = 2e^{\frac{x^3}{3}}
+\]
+Somit ist die Lösungsmenge von $y_p$
+\[
+\{ y_p'(x) = e^{-\frac{x^3}{3}} (2e^{\frac{x^3}{3}} + c_2) | c_2 \in \R \}
+= \{ y_p'(x) =2 + c_3) | c_3 \in \R \}
+\]
+Die Lösungsmenge der generellen Lösung der allgemeinen Lösung ist somit $y$\[
+\{ y(x) =  c_1e^{-\frac{x^3}{3}} +  2  | c_1 \in \R \}
+\]
+
+\subsubsection{Beispiel genereller Ansatz}
 Gegeben: $y' + x^2 \cdot y = 2x^2$
 
 Homogene DGL lösen: $y' + x^2 \cdot y = 0$
@@ -90,9 +160,9 @@ u(x) &= 2 e^{\frac{1}{3}x^3}
 Wir erhalten somit: $\underline{y_p} = 2 e^{\frac{1}{3}x^3} \cdot e^{-\frac{1}{3}x^3} = \underline{2}$.
 Die allgemeine Lösung des inhomogenen DGL ist somit:
 $\underline{\underline{y}} = y_h + y_p = \underline{\underline{A \cdot e^{-\frac{1}{3}x^3} + 2}}$
-\\
-\\
-Direkterer Lösungsweg\\
+
+
+\subsubsection{Beispiel Direkterer Lösungsweg}
 Gegeben: $y' + x^2 \cdot y = 2x^2$.
 Direkt lösen:
 \begin{equation}
