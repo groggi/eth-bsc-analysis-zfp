@@ -1,9 +1,10 @@
 \section{Formeltafel}
-\subsection{Einfache Mathe}
-	\subsubsection{Mitternachtsformel}
-	\[ a x + b x + c = 0 \qquad \implies \qquad x_{1,2} = \frac{-b \pm \sqrt{b^2-4ac}}{2a} \]
-	\subsubsection{Binomialkoeffizient}
-	\[ \binom nk = \frac{n!}{k!\,(n-k)!} \quad \mbox{für }\ 0\leq k\leq n \]
+\subsection{Mitternachtsformel}
+\[ a x + b x + c = 0 \qquad \implies \qquad x_{1,2} = \frac{-b \pm \sqrt{b^2-4ac}}{2a} \]
+
+\subsection{Binomialkoeffizient}
+\[ \binom nk = \frac{n!}{k!\,(n-k)!} \quad \mbox{für }\ 0\leq k\leq n \]
+
 \subsection{Argument}
 \[
 	\arg(x,y) := \begin{cases}
@@ -60,18 +61,18 @@ $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{y}{x}$
 	1 + e^{2x} + 1}{e^{2x} + 1} = \frac{2e^{2x}}{e^{2x} + 1}$
 \end{itemize}
 
-\subsection{Int. \& Diff. -Regeln}
+
+\subsection{Ableitungen}
+\subsection{Regeln}
 \begin{itemize}[leftmargin=*]
 	\item (Summenregel) $(f + g)'(x) = f'(x) + g'(x)$
 	\item (Produktregel) $(fg)'(x) = f'(x)g(x) + f(x)g'(x)$
 	\item (Quotientenregel) $(\frac{f}{g})'(x) = \frac{f'(x)g(x) -
 	f(x)g'(x)}{g^2(x)}$
 	\item (Kettenregel) $(g \circ f)'(x) = (g(f(x)))' = g'(f(x)) f'(x)$
-	\item $\int u'\cdot v dx = uv - \int u \cdot v' dx$
-	\item $\int f(x) dx = \int f(g(t)) g'(t) dt, \; x=g(t), dx = g'(t) dt$
 \end{itemize}
 
-\subsection{Ableitungen}
+\subsection{Ableitungs-Tafel}
 \begin{itemize}[leftmargin=*]
 	\item $\frac{d}{dx}\; x^n = nx^{n-1}$
 	\item $\frac{d}{dx}\; \frac{1}{x^n} = -n \frac{1}{x^{n+1}}$
@@ -102,9 +103,11 @@ $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{y}{x}$
 \end{itemize}
 
 \subsection{Integrale}
-\subsubsection{einfache Integralregeln}
+\subsubsection{Integralregeln}
 Es gelte: $\int f(x) \, dx = F(x)$
 \begin{itemize}[leftmargin=*]
+	\item $\int u'\cdot v dx = uv - \int u \cdot v' dx$
+	\item $\int f(x) dx = \int f(g(t)) \cdot g'(t) dt, \; x=g(t), dx = g'(t) dt$\newline\hfill
 	\item $\int f(a + x) \,dx = F(a + x)$
 	\item $\int f(a - x) \,dx = -F(a-x)$
 	\item $\int f(-x) \,dx = -F(-x)$
@@ -211,37 +214,44 @@ Es gelte: $\int f(x) \, dx = F(x)$
 	n^\alpha (\alpha > 0), \quad q^n (q > 1), \quad n!, \quad n^n$ $\Rightarrow
 	\lim_{x \to \infty} \frac{\ln n}{n^\alpha} = 0$
 \end{itemize}
-\subsubsection{$x \rightarrow \infty$}
-\begin{multicols}{2}
+\subsubsection{$\lim_{n \to \infty}$}
 \begin{itemize}[leftmargin=*]
-	\item $\sqrt[n]{a} \rightarrow 1$
-	\item $\sqrt[n]{n} \rightarrow 1$
-	\item $\sqrt[n]{n!} \rightarrow \infty$
-	\item $\frac{n}{\sqrt[n]{n!}} \rightarrow e$
-	\item $\frac{1}{n} \sqrt[n]{n!} \rightarrow \frac{1}{e}$
-	\item $\left ( \frac{n+1}{n} \right )^n \rightarrow e$
-	\item $\left ( 1 + \frac{1}{n} \right )^n \rightarrow e$
-	\item $\left ( 1 - \frac{1}{n} \right )^n \rightarrow \frac{1}{e}$
-	\item $\left ( 1 + \frac{x}{n} \right )^n \rightarrow e^x$
-	\item $\left ( 1 - \frac{x}{n} \right )^n \rightarrow \frac{1}{e^x}$
-	\item ${a \choose n} \rightarrow 0, \; a > -1$
-	\item $\frac{a^n}{n!} \rightarrow 0$
-	\item $\frac{n^n}{n!} \rightarrow \infty$
-	\item $\frac{a^n}{n^k} \rightarrow \infty, a > 1, k$ fest
-	\item $a^n n^k \rightarrow 0, |a| < 1, k$ fest
-	\item $n(\sqrt[n]{a} - 1) \rightarrow \ln a, a > 0$
+	\item $\lim_{n \to \infty} \sqrt[n]{a} \rightarrow 1$
+	\item $\lim_{n \to \infty} \sqrt[n]{n} \rightarrow 1$
+	\item $\lim_{n \to \infty} \sqrt[n]{n!} \rightarrow \infty$
+	\item $\lim_{n \to \infty} \frac{n}{\sqrt[n]{n!}} \rightarrow e$
+	\item $\lim_{n \to \infty} \frac{1}{n} \sqrt[n]{n!} \rightarrow \frac{1}{e}$
+	\item $\lim_{n \to \infty} \left ( \frac{n+1}{n} \right )^n \rightarrow e$
+	\item $\lim_{n \to \infty} \left ( 1 + \frac{1}{n} \right )^n \rightarrow e$
+	\item $\lim_{n \to \infty} \left ( 1 - \frac{1}{n} \right )^n \rightarrow \frac{1}{e}$
+	\item $\lim_{n \to \infty} \left ( 1 + \frac{x}{n} \right )^n \rightarrow e^x$
+	\item $\lim_{n \to \infty} \left ( 1 - \frac{x}{n} \right )^n \rightarrow \frac{1}{e^x}$
+	\item $\lim_{n \to \infty} {a \choose n} \rightarrow 0, \; a > -1$
+	\item $\lim_{n \to \infty} \frac{a^n}{n!} \rightarrow 0$
+	\item $\lim_{n \to \infty} \frac{n^n}{n!} \rightarrow \infty$
+	\item $\lim_{n \to \infty} \frac{a^n}{n^k} \rightarrow \infty, a > 1, k$ fest
+	\item $\lim_{n \to \infty} a^n n^k \rightarrow 0, |a| < 1, k$ fest
+	\item $\lim_{n \to \infty} n(\sqrt[n]{a} - 1) \rightarrow \ln a, a > 0$
+	\item $\lim_{n \to \infty} \left( 1+\frac{x}{n} \right)^n = e^x \quad$
+	\item $\lim_{n \to \infty} \sqrt[n]{n} = 1$
+	\item $\lim_{n \to \infty} n^p q^n = 0 \qquad p \in \N \text{ und } 0 < q < 1$
+	\item $\lim_{n \to \infty} \sqrt{x^2-x}-x = \frac{1}{2}$ \newline{\small (Lösungsansatz mit Taylorreihe
+	($\sqrt{1-x} = 1 + \frac{x}{2}+O(x^2)$): $\sqrt{x^2-x}-x = x(\sqrt{1-\frac{1}{x}}-1) =
+	x((1+\frac{1}{2x}+O(\frac{1}{x^2}))-1) = \frac{1}{2}+O(\frac{1}{x}) \underset{n \to \infty}{\longrightarrow} \frac{1}{2}$ )}
 \end{itemize}
-\end{multicols}
-\subsubsection{$x \to 0$}
-\begin{multicols}{2}
+\subsubsection{$\lim_{x \to 0}$}
 \begin{itemize}[leftmargin=*]
-  \item $\frac{a^x - 1}{x} = \ln a$
-  \item $\frac{\sin x}{x} = 1$
-  \item $\frac{1 - \cos x}{x} = 0$
-  \item $\frac{\log_a (1 + x)}{x} = \frac{1}{\ln a}$
-  \item $x^a \ln x = 0, \; a  > 0$
+	\item $\lim_{x \to 0} \frac{a^x - 1}{x} = \ln a$
+	\item $\lim_{x \to 0} \frac{\sin x}{x} = 1$
+	\item $\lim_{x \to 0} \frac{1 - \cos x}{x} = 0$
+	\item $\lim_{x \to 0} \frac{\log_a (1 + x)}{x} = \frac{1}{\ln a}$
+	\item $\lim_{x \to 0} x^a \ln x = 0, \; a  > 0$
+	\item $\lim_{x \to 0} \frac{a^x-1}{x} = \ln a$ 
+	\item $\lim_{x \to 0} \frac{\sin(x)}{x} = 1$ 
+	\item $\lim_{x \to 0} \frac{1-\cos(x)}{x} = 0 \quad$ 
+	\item $\lim_{x \to 0} \frac{\log_a(1+x)}{x} = \frac{1}{\ln a}$
+	\item $\lim_{x \to 0} x^\alpha \ln x = 0 \qquad \alpha > 0$
 \end{itemize}
-\end{multicols}
 
 \subsection{Reihen}
 \begin{itemize}[leftmargin=*]
@@ -277,34 +287,7 @@ Es gelte: $\int f(x) \, dx = F(x)$
 \]
 }
 
-\subsection{Geometrische Körper}
-\subsubsection{Ellipsoid}
-Hat die Form eines Rugbyballs. In kartesischen Koordinaten definert durch
-$\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} - 1 = 0$.
-
-\subsection{Ausklammern}
-\begin{itemize}[leftmargin=*]
-	\item $x^n - y^n = (x-y) (x^{n-1} + x^{n-2}y + x^{n-3}y^2 + \ldots + xy^{n-2}
-	+ y^{n-1})$
-	\item $x^n - 1 = (x-1)(x^{n-1} + x^{n-2} + \ldots + x + 1)$
-\end{itemize}
-
-\subsection{Aus Serien}
-\begin{itemize}[leftmargin=*]
-	\item Ableitung von $x^x$ kann man berechnen, indem man $x = e^{\log(x)}$
-	setzt. Also in diesem Fall $e^{\log(x^x)} = e^{x \log(x)}$ ableitet, was $e^{x
-	\log(x)} (1 + \log(x))$ (Serie 10)
-	\item Cauchy-Schwarz Ungleichung: $|x \cdot y| \leq \|x\| \cdot \|y\|, \; x,y \in \R^n$
-	\item Euler Identität (komplexe Zahlen): $e^{ix} = \cos(x) + i \sin(x)$
-\end{itemize}
-
-\subsection{Funktionsmanipulation}
-\includegraphics[width=\columnwidth]{manipulation_1.eps}
-\includegraphics[width=\columnwidth]{manipulation_2.eps}
-\includegraphics[width=\columnwidth]{manipulation_3.eps}
-
 \begin{multicols}{2}
-
 \subsection{Exponent}
 \begin{itemize}[leftmargin=*]
   \item $a^n a^m = a^{n + m}$
@@ -351,23 +334,37 @@ $\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} - 1 = 0$.
   \item $\log_a (x-y) = \log_a x + \log_a (1- \frac{y}{x})$
 \end{itemize}
 
-\subsection{Wichtige Grenzwerte}
-			
-\begin{itemize}[leftmargin=*]
-  \item $ \lim\limits_{n \to \infty} \left( 1+\frac{x}{n} \right)^n = e^x \quad $
-  \item $ \lim\limits_{n \to \infty} \sqrt[n]{n} = 1 $ 
-  \item  $ \lim\limits_{x \to 0} \frac{a^x-1}{x} = \ln a $ 
-  \item $ \lim\limits_{x \to 0} \frac{\sin(x)}{x} = 1 $ 
-  \item $ \lim\limits_{x \to 0} \frac{1-\cos(x)}{x} = 0 \quad $ 
-  \item  $ \lim\limits_{x \to 0} \frac{\log_a(1+x)}{x} = \frac{1}{\ln a} $
-  \item $ \lim\limits_{n \to \infty} n^p q^n = 0 \qquad p \in \N \text{ und } 0 < q < 1 $
-  \item $ \lim\limits_{x \to 0} x^\alpha \ln x = 0 \qquad \alpha > 0 $
-  \item $ \lim\limits_{n \to \infty} \sqrt{x^2-x}-x = \frac{1}{2}$ (Lösungsansatz mit Taylorreihe ($\sqrt{1-x} = 1 + \frac{x}{2}+O(x^2)$): $\sqrt{x^2-x}-x = x(\sqrt{1-\frac{1}{x}}-1) = x((1+\frac{1}{2x}+O(\frac{1}{x^2}))-1) = \frac{1}{2}+O(\frac{1}{x}) \underset{n \to \infty}{\longrightarrow} \frac{1}{2} $ )
-\end{itemize}
-
 \subsection{Komplexe Zahlen}
 \begin{itemize}[leftmargin=*]
 	\item $z \in \C: z = a + b\cdot i$
 	\item $i^2 = -1$
+	\item $(a + bi) + (c + di) = (a + c) + (b + d)i$
+	\item $(a + bi) \cdot (c + di) = (ac - bd) + (ad + bc)i$
+	\item $\frac{a + bi}{c + di} = \frac{ac + bd}{c^2 + d^2} + \frac{bc - ad}{c^2 + d^2}\cdot i$
 \end{itemize}
 
+\subsection{Geometrische Körper}
+\subsubsection{Ellipsoid}
+Hat die Form eines Rugbyballs. In kartesischen Koordinaten definert durch
+$\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} - 1 = 0$.
+
+\subsection{Ausklammern}
+\begin{itemize}[leftmargin=*]
+	\item $x^n - y^n = (x-y) (x^{n-1} + x^{n-2}y + x^{n-3}y^2 + \ldots + xy^{n-2}
+	+ y^{n-1})$
+	\item $x^n - 1 = (x-1)(x^{n-1} + x^{n-2} + \ldots + x + 1)$
+\end{itemize}
+
+\subsection{Aus Serien}
+\begin{itemize}[leftmargin=*]
+	\item Ableitung von $x^x$ kann man berechnen, indem man $x = e^{\log(x)}$
+	setzt. Also in diesem Fall $e^{\log(x^x)} = e^{x \log(x)}$ ableitet, was $e^{x
+	\log(x)} (1 + \log(x))$ (Serie 10)
+	\item Cauchy-Schwarz Ungleichung: $|x \cdot y| \leq \|x\| \cdot \|y\|, \; x,y \in \R^n$
+	\item Euler Identität (komplexe Zahlen): $e^{ix} = \cos(x) + i \sin(x)$
+\end{itemize}
+
+\subsection{Funktionsmanipulation}
+\includegraphics[width=\columnwidth]{manipulation_1.eps}
+\includegraphics[width=\columnwidth]{manipulation_2.eps}
+\includegraphics[width=\columnwidth]{manipulation_3.eps}
