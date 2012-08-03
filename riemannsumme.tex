@@ -1,4 +1,28 @@
 \section{Riemannsummen (Riemannintegral)}
+\subsection{Riemansumme}
+Wir betrachten die folgende Einteilung des Intervals $[a,b]$:\[
+E: [a,b] = \bigcup_{k=1}^{N}[x_{k-1}, x_k] \text{ mit } x_k = a + k \cdot \frac{b-a}{N}.
+\]
+Die Feinheit dieser Zerlegung ist:\[
+\delta(E) \equiv max\{x_k - x_{k-1}|k = 1...N\} = \frac{b-a}{N} \xrightarrow{N \to \infty} = 0
+\]
+$\xi_i$ sein ein Punkt auf dem Interval $[x_{i-1}, x_i]$, somit $\xi_i \in[x_{i-1}, x_i]$.\\
+Somit können wir die Riehmannsumme bilden:
+\begin{align*}
+\int_a^b f(x)\;dx &=\sum (f,E,\xi)\\
+&= \lim_{N \to \infty} \underbrace{\sum_{k=0}^{N-1}
+\underbrace{f(\xi_i)}_{\text{``Höhe''}} \cdot
+\underbrace{\delta(E)}_{\text{``Länge''}}}_{\text{Riemann-Summe}}\\
+&= \lim_{N \to \infty} \sum_{k=0}^{N-1} {f(a +
+k\frac{b-a}{N})} \cdot \frac{b-a}{N}
+\end{align*}
+\subsection{Riemann Integrabel}
+Die Funktion $f$ sei Riemann Integrabel wenn es ein $I \in \R$ gibt so dass: $\forall \epsilon > 0, \exists \nu > 0$ so dass \[
+|I| - \epsilon < \sum (f,E,\xi) < |I| + \epsilon
+\]
+für jede Einteilung $E$ von $[a,b]$ mit $\delta(E) < \nu$, und für jede Wahl von Zwischenpunkten $\xi$.
+
+\subsection{Beispiel}
 Es soll das Intergral mittels Riemannschen Summe berechnet werden: $\int_a^b
 e^{\lambda x}\,dx, \; \lambda \in \R$. $f(x) = e^{\lambda x}$
 
