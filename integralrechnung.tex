@@ -10,13 +10,20 @@ $\int F'(g(x)) g'(x)dx = F(g(x))$
 	\item Für die neue Variable $u = g(x)$ bildet man: $\frac{du}{dx} = g'(x)
 	\Leftrightarrow du = g'(x)dx$. Ersetzt also $g(x) = u$ und $dx =
 	\frac{du}{g'(x)}$. Wenn noch $x$ übrig sind, ist ein Zwischenschritt nötig:
-	Löse $u = g(x)$ durch $x = h(x)$ nach $x$ auf und ersetze die restlichen $x$
-	durch $h(x)$.
+	Löse $u = g(x)$ nach $x$ auf, somit resultiert eine neue Formel mit 
+	$x = h(u)$, substituiere nun $x$ durch $h(x)$.
 	\item Bei bestimmten Integralen: Sei $\int_a^b \ldots \,dx$. Dann sind die neuen
 	Grenzen für das neue Integral $g(a)$ und $g(b)$
 	\item Berechne das Integral in $u$
 	\item Ersetze im Ergebnis $u$ durch $g(x)$
 \end{enumerate}
+
+
+\subsubsection{Integrale mit Parametern}
+	Sei $h: \R^2 \to \R$ stetig und partiell nach $t$ diffbar mit stetiger Ableitungsfunktion. Betrachte 
+	\[ u(y) = \int_0^y h(x,y) \; \rmd x \]
+	Dann ist $u \in C^1(\R)$ und für die Ableitung gilt
+	\[ \dot{u}(y) = h(x,y)|_{x=y} + \int_0^y \frac{\partial h}{\partial y} (x,y) \; \rmd x \]
 
 \subsubsection{Beispiel: einfaches Integral}
 Das Integral $\int_{-2}^1 x^2 \,dx$ berechnet die blaue Fläche die durch die Funktion $f(x) = x^2$ beschränkt wird.
