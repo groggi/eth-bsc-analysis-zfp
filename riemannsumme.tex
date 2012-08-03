@@ -7,6 +7,12 @@ Die Feinheit dieser Zerlegung ist:\[
 \delta(E) \equiv max\{x_k - x_{k-1}|k = 1...N\} = \frac{b-a}{N} \xrightarrow{N \to \infty} = 0
 \]
 $\xi_i$ sein ein Punkt auf dem Interval $[x_{i-1}, x_i]$, somit $\xi_i \in[x_{i-1}, x_i]$.\\
+
+\begin{figure}
+	\includegraphics[width=\columnwidth]{riemann.png}
+	\caption[Bildunterschrift]{Darstellung Riemannintegral mit $\xi_i = t_i$ und unsymetrischer Intervaleinteilung $E$.}
+\end{figure}
+
 Somit können wir die Riehmannsumme bilden:
 \begin{align*}
 \int_a^b f(x)\;dx &=\sum (f,E,\xi)\\
@@ -16,6 +22,8 @@ Somit können wir die Riehmannsumme bilden:
 &= \lim_{N \to \infty} \sum_{k=0}^{N-1} {f(a +
 k\frac{b-a}{N})} \cdot \frac{b-a}{N}
 \end{align*}
+
+
 \subsection{Riemann Integrabel}
 Die Funktion $f$ sei Riemann Integrabel wenn es ein $I \in \R$ gibt so dass: $\forall \epsilon > 0, \exists \nu > 0$ so dass \[
 |I| - \epsilon < \sum (f,E,\xi) < |I| + \epsilon
