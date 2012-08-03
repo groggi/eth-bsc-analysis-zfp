@@ -1,0 +1,46 @@
+\section{Stetigkeit von Funktionen mit mehreren Variabeln}
+\begin{definition}[Grenzwert]
+Eine Funktion $f(\vec{x})$ hat einen \underline{Grenzwert} $b$ an der Stelle
+$\vec{a}$, wenn für \underline{jede} vektorwertige Folge $(\vec{x}_k)_{k \in \N}$,
+mit $\vec{x}_k \neq \vec{a}$, $\lim_{k \to \infty}f(\vec{x}_k) = b$ erfüllt ist
+\end{definition}
+\begin{definition}[Stetigkeit]
+Die Funktion $f(\vec{x})$ ist stetig im Punkt $\vec{a}$, wenn für
+\underline{beliebige} Folgen $(\vec{x}_k)_{k \in \N}$ mit
+$(\vec{x}_k) \to \vec{a}$ gilt: $\lim_{\vec{x}_k \to \vec{a}} f(\vec{x}_k) = f(\vec{a})$
+für alle $k$ gilt.
+\end{definition}
+
+\subsection{Typische Fälle}
+\begin{itemize}
+	\item $x$-Achse entlang: $y = 0$
+	\item $y$-Achse entlang: $x = 0$
+	\item Winkelhalbierende: $x = y$
+\end{itemize}
+
+\subsection{Beispiel 1}
+\[
+f(x, y) = \begin{cases}
+	\frac{4xy}{x^2 + y^2} & (x,y) \neq (0,0)\\
+	0 & (x,y) = (0,0)
+\end{cases}
+\]
+
+Die Funktion ist als Komposition, Addidition und Multiplikation stetiger
+Funktionen überall ausser in $(0,0)$ stetig (1. Zeile). Es bleibt zu untersuchen,
+ob $f$ auch in $(0,0)$ stetig ist.
+
+Längs der $x$-Achse ($y = 0$) erhalten wir:
+\begin{align*}
+f(x, 0) = \frac{4x \cdot 0}{x^2 + 0^2} = 0\\
+\underline{\lim_{x \to 0} f(x, 0)} = \lim_{x \to 0} 0 = \underline{0}
+\end{align*}
+
+Als nächstes untersuchen wir die Winkelhalbierende ($x = y$):
+\begin{align*}
+f(x, x) = \frac{4x^2}{x^2 + x^2} = \frac{4x^2}{2x^2} = 2\\
+\underline{\lim_{x \to 0} f(x, x)} = \lim_{x \to 0} 2 = \underline{2}
+\end{align*}
+
+Die Funktion ist somit in $(0,0)$ nicht stetig, da
+$\lim_{x \to 0} f(x, 0) \neq \lim_{x \to 0} f(x, x)$ ist.

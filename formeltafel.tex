@@ -1,9 +1,10 @@
 \section{Formeltafel}
-\subsection{Einfache Mathe}
-	\subsubsection{Mitternachtsformel}
-	\[ a x + b x + c = 0 \qquad \implies \qquad x_{1,2} = \frac{-b \pm \sqrt{b^2-4ac}}{2a} \]
-	\subsubsection{Binomialkoeffizient}
-	\[ \binom nk = \frac{n!}{k!\,(n-k)!} \quad \mbox{für }\ 0\leq k\leq n \]
+\subsection{Mitternachtsformel}
+\[ a x + b x + c = 0 \qquad \implies \qquad x_{1,2} = \frac{-b \pm \sqrt{b^2-4ac}}{2a} \]
+
+\subsection{Binomialkoeffizient}
+\[ \binom nk = \frac{n!}{k!\,(n-k)!} \quad \mbox{für }\ 0\leq k\leq n \]
+
 \subsection{Argument}
 \[
 	\arg(x,y) := \begin{cases}
@@ -45,20 +46,51 @@ $-\sqrt{3}$ & $0$ & $\tan(\alpha + k \cdot$\hl{$\pi$}$)$ & $]-\infty, \infty[$
 \includegraphics[width=\columnwidth]{einheitskreis_sin_cos.eps}
 $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{y}{x}$
 
-\todo{Periode für manipulierte Winkel: $\sin(0.6\alpha)$}
+\subsection{Trigonometrische Funktionen \& Additionstheorem}
+\begin{itemize}[leftmargin=*]
+	\item $\sin^2(x) + \cos^2(x) = 1$
+	\item $\frac{1}{\cos^2(\alpha)} = 1 + \tan^2(\alpha)$
+	\item $\sin(90^\circ \pm \alpha) = \cos(\alpha)$
+	\item $\sin(180^\circ \pm \alpha) = \mp \sin(\alpha)$
+	\item $\cos(90^\circ \pm \alpha) = \mp \sin(\alpha)$
+	\item $\cos(180^\circ \pm \alpha) = - \cos(\alpha)$
+	\item $\sin(\alpha \pm \beta) = \sin(\alpha)\cos(\beta) \pm
+	\cos(\alpha)\sin(\beta)$
+	\item $\cos(\alpha \pm \beta) = \cos(\alpha)\cos(\beta) \mp \sin(\alpha)
+	\sin(\beta)$
+	\item $\tan(\alpha \pm \beta) = \frac{\tan(\alpha) \pm \tan(\beta)}{1 \mp
+	\tan(\alpha)\tan(\beta)}$
+	\item $\sin(2\alpha) = 2 \sin(\alpha)\cos(\alpha)$
+	\item $\cos(2\alpha) = \cos^2(\alpha) - \sin^2(\alpha) = 2 \cos^2(\alpha) - 1
+	= 1 - 2 \sin^2(\alpha)$
+	\item $\tan(2\alpha) = \frac{2 \tan(\alpha)}{1 - \tan^2(\alpha)}$
+\end{itemize}
 
-\subsection{Int. \& Diff. -Regeln}
+\subsection{Hyperbelfunktionen}
+\begin{itemize}[leftmargin=*]
+	\item $\sinh(x) = \frac{1}{2}(e^x - e^{-x}) = -i \sin(ix)$
+	\item $\cosh(x) = \frac{1}{2}(e^x + e^{-x}) = \cos(ix)$
+	\item $\tanh(x) = \frac{\sinh(x)}{\cosh(x)} = \frac{e^x - e^{-x}}{e^x +
+	e^{-x}} = \frac{e^{2x} - 1}{e^{2x} + 1} = 1 - \frac{2}{e^{2x} + 1}$
+	\item $\arcsinh(x) = \ln(x + \sqrt{x^2 + 1})$
+	\item $\arcosh(x) = \ln(x + \sqrt{x^2 - 1})$
+	\item $\arctanh(x) = \frac{1}{2} \ln(\frac{1+x}{1-x})$
+	\item Umformung: $\tanh(x) + 1 = \frac{e^{2x} - 1}{e^{2x} + 1} + 1 = \frac{2x -
+	1 + e^{2x} + 1}{e^{2x} + 1} = \frac{2e^{2x}}{e^{2x} + 1}$
+\end{itemize}
+
+
+\subsection{Ableitungen}
+\subsection{Regeln}
 \begin{itemize}[leftmargin=*]
 	\item (Summenregel) $(f + g)'(x) = f'(x) + g'(x)$
 	\item (Produktregel) $(fg)'(x) = f'(x)g(x) + f(x)g'(x)$
 	\item (Quotientenregel) $(\frac{f}{g})'(x) = \frac{f'(x)g(x) -
 	f(x)g'(x)}{g^2(x)}$
 	\item (Kettenregel) $(g \circ f)'(x) = (g(f(x)))' = g'(f(x)) f'(x)$
-	\item $\int u'\cdot v dx = uv - \int u \cdot v' dx$
-	\item $\int f(x) dx = \int f(g(t)) g'(t) dt, \; x=g(t), dx = g'(t) dt$
 \end{itemize}
 
-\subsection{Ableitungen}
+\subsection{Ableitungs-Tafel}
 \begin{itemize}[leftmargin=*]
 	\item $\frac{d}{dx}\; x^n = nx^{n-1}$
 	\item $\frac{d}{dx}\; \frac{1}{x^n} = -n \frac{1}{x^{n+1}}$
@@ -86,12 +118,15 @@ $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{y}{x}$
 		$\frac{d}{dx}\; \arctan(x) = \frac{1}{x^2+1}$
 	\item $\frac{d}{dx}\; x^{x^\alpha} = x^{x^\alpha + \alpha - 1} (\alpha
 	\log(x) + 1)$
+	\item $\frac{d}{dx}\; e^{x^\alpha} = \alpha x^{\alpha - 1} e^{x^\alpha}$
 \end{itemize}
 
 \subsection{Integrale}
-\subsubsection{einfache Integralregeln}
+\subsubsection{Integralregeln}
 Es gelte: $\int f(x) \, dx = F(x)$
 \begin{itemize}[leftmargin=*]
+	\item $\int u'\cdot v dx = uv - \int u \cdot v' dx$
+	\item $\int f(x) dx = \int f(g(t)) \cdot g'(t) dt, \; x=g(t), dx = g'(t) dt$\newline\hfill
 	\item $\int f(a + x) \,dx = F(a + x)$
 	\item $\int f(a - x) \,dx = -F(a-x)$
 	\item $\int f(-x) \,dx = -F(-x)$
@@ -117,11 +152,10 @@ Es gelte: $\int f(x) \, dx = F(x)$
 	\item $\int \frac{1}{a^2 - x^2} \,dx = \frac{1}{2a} \ln \left | \frac{a+x}{a-x}
 	\right |$
 	\item $\int \sqrt{x} \,dx = \frac{2}{3}\sqrt{x^3}$
-	%mühsamer kerl der teilweise in prüfungen verwendet wird. Kann man über subsitution von x mit sin(u) lösen.
-	\item $\int \sqrt{1-x^2} \,dx = \frac{1}{2}\left( x\sqrt{1-x^2}+\frac{1}{\sin(x)} \right)$
+	\item $\int a^{xb + c} \,dx = \frac{a^{bx + c}}{b \log(a)}$
 \end{itemize}
 
-\subsubsection{Integrale trionometrischer Funktionen}
+\subsubsection{trionometrische Funktionen}
 \begin{itemize}[leftmargin=*]
 	\item $\int \sin(ax) \,dx = -\frac{1}{a}\cos(ax)$
 	\item $\int \cos(ax) \,dx = \frac{1}{a}\sin(ax)$
@@ -138,32 +172,22 @@ Es gelte: $\int f(x) \, dx = F(x)$
 	\item $\int \arctan(x) \,dx = x \arctan(x) - \frac{1}{2} \ln(1+x^2)$
 \end{itemize}
 
-\subsubsection{Integrale von Exponentialfunktion}
+\subsubsection{Hyperbelfunktionen}
+\begin{itemize}[leftmargin=*]
+	\item $\int \sinh(ax + b) \,dx = \frac{\cosh(ax + b)}{a}$; $\int \sinh(x) \,dx
+	= \cosh(x)$
+	\item $\int \cosh(ax + b) \,dx = \frac{\sinh(ax + b)}{a}$; $\int \cosh(x) \,dx
+	= \sinh(x)$
+	\item $\int \tan(ax + b) \,dx = \frac{\log(\cosh(ax+b))}{a}$; $\int \tan(x)
+	\,dx = \log(\cosh(x))$
+\end{itemize}
+
+\subsubsection{Exponentialfunktion}
 \begin{itemize}[leftmargin=*]
   	\item $\int e^{ax} \,dx = \frac{1}{a} e^{ax}$ 
 	\item $\int x e^{ax} \,dx = e^{ax} \cdot \left ( \frac{ax - 1}{a^2} \right )$
 	\item $\int x \ln(x) \,dx = \frac{1}{2} x^2 (\ln(x) - \frac{1}{2})$
 	\item $\int_{-\infty}^\infty e^{-\frac{1}{a}x^2} \,dx = \sqrt{a \pi}$
-\end{itemize}
-
-\subsection{Trigonometrische Funktionen \& Additionstheorem}
-\begin{itemize}[leftmargin=*]
-	\item $\sin^2(x) + \cos^2(x) = 1$
-	\item $\frac{1}{\cos^2(\alpha)} = 1 + \tan^2(\alpha)$
-	\item $\sin(90^\circ \pm \alpha) = \cos(\alpha)$
-	\item $\sin(180^\circ \pm \alpha) = \mp \sin(\alpha)$
-	\item $\cos(90^\circ \pm \alpha) = \mp \sin(\alpha)$
-	\item $\cos(180^\circ \pm \alpha) = - \cos(\alpha)$
-	\item $\sin(\alpha \pm \beta) = \sin(\alpha)\cos(\beta) \pm
-	\cos(\alpha)\sin(\beta)$
-	\item $\cos(\alpha \pm \beta) = \cos(\alpha)\cos(\beta) \mp \sin(\alpha)
-	\sin(\beta)$
-	\item $\tan(\alpha \pm \beta) = \frac{\tan(\alpha) \pm \tan(\beta)}{1 \mp
-	\tan(\alpha)\tan(\beta)}$
-	\item $\sin(2\alpha) = 2 \sin(\alpha)\cos(\alpha)$
-	\item $\cos(2\alpha) = \cos^2(\alpha) - \sin^2(\alpha) = 2 \cos^2(\alpha) - 1
-	= 1 - 2 \sin^2(\alpha)$
-	\item $\tan(2\alpha) = \frac{2 \tan(\alpha)}{1 - \tan^2(\alpha)}$
 \end{itemize}
 
 \subsection{Reihenentwicklung}
@@ -189,37 +213,44 @@ Es gelte: $\int f(x) \, dx = F(x)$
 	n^\alpha (\alpha > 0), \quad q^n (q > 1), \quad n!, \quad n^n$ $\Rightarrow
 	\lim_{x \to \infty} \frac{\ln n}{n^\alpha} = 0$
 \end{itemize}
-\subsubsection{$x \rightarrow \infty$}
-\begin{multicols}{2}
+\subsubsection{$\lim_{n \to \infty}$}
 \begin{itemize}[leftmargin=*]
-	\item $\sqrt[n]{a} \rightarrow 1$
-	\item $\sqrt[n]{n} \rightarrow 1$
-	\item $\sqrt[n]{n!} \rightarrow \infty$
-	\item $\frac{n}{\sqrt[n]{n!}} \rightarrow e$
-	\item $\frac{1}{n} \sqrt[n]{n!} \rightarrow \frac{1}{e}$
-	\item $\left ( \frac{n+1}{n} \right )^n \rightarrow e$
-	\item $\left ( 1 + \frac{1}{n} \right )^n \rightarrow e$
-	\item $\left ( 1 - \frac{1}{n} \right )^n \rightarrow \frac{1}{e}$
-	\item $\left ( 1 + \frac{x}{n} \right )^n \rightarrow e^x$
-	\item $\left ( 1 - \frac{x}{n} \right )^n \rightarrow \frac{1}{e^x}$
-	\item ${a \choose n} \rightarrow 0, \; a > -1$
-	\item $\frac{a^n}{n!} \rightarrow 0$
-	\item $\frac{n^n}{n!} \rightarrow \infty$
-	\item $\frac{a^n}{n^k} \rightarrow \infty, a > 1, k$ fest
-	\item $a^n n^k \rightarrow 0, |a| < 1, k$ fest
-	\item $n(\sqrt[n]{a} - 1) \rightarrow \ln a, a > 0$
+	\item $\lim_{n \to \infty} \sqrt[n]{a} \rightarrow 1$
+	\item $\lim_{n \to \infty} \sqrt[n]{n} \rightarrow 1$
+	\item $\lim_{n \to \infty} \sqrt[n]{n!} \rightarrow \infty$
+	\item $\lim_{n \to \infty} \frac{n}{\sqrt[n]{n!}} \rightarrow e$
+	\item $\lim_{n \to \infty} \frac{1}{n} \sqrt[n]{n!} \rightarrow \frac{1}{e}$
+	\item $\lim_{n \to \infty} \left ( \frac{n+1}{n} \right )^n \rightarrow e$
+	\item $\lim_{n \to \infty} \left ( 1 + \frac{1}{n} \right )^n \rightarrow e$
+	\item $\lim_{n \to \infty} \left ( 1 - \frac{1}{n} \right )^n \rightarrow \frac{1}{e}$
+	\item $\lim_{n \to \infty} \left ( 1 + \frac{x}{n} \right )^n \rightarrow e^x$
+	\item $\lim_{n \to \infty} \left ( 1 - \frac{x}{n} \right )^n \rightarrow \frac{1}{e^x}$
+	\item $\lim_{n \to \infty} {a \choose n} \rightarrow 0, \; a > -1$
+	\item $\lim_{n \to \infty} \frac{a^n}{n!} \rightarrow 0$
+	\item $\lim_{n \to \infty} \frac{n^n}{n!} \rightarrow \infty$
+	\item $\lim_{n \to \infty} \frac{a^n}{n^k} \rightarrow \infty, a > 1, k$ fest
+	\item $\lim_{n \to \infty} a^n n^k \rightarrow 0, |a| < 1, k$ fest
+	\item $\lim_{n \to \infty} n(\sqrt[n]{a} - 1) \rightarrow \ln a, a > 0$
+	\item $\lim_{n \to \infty} \left( 1+\frac{x}{n} \right)^n = e^x \quad$
+	\item $\lim_{n \to \infty} \sqrt[n]{n} = 1$
+	\item $\lim_{n \to \infty} n^p q^n = 0 \qquad p \in \N \text{ und } 0 < q < 1$
+	\item $\lim_{x \to \infty} \sqrt{x^2-x}-x = \frac{1}{2}$ \newline{\small (Lösungsansatz mit Taylorreihe
+	($\sqrt{1-x} = 1 + \frac{x}{2}+O(x^2)$): $\sqrt{x^2-x}-x = x(\sqrt{1-\frac{1}{x}}-1) =
+	x((1+\frac{1}{2x}+O(\frac{1}{x^2}))-1) = \frac{1}{2}+O(\frac{1}{x}) \underset{n \to \infty}{\longrightarrow} \frac{1}{2}$ )}
 \end{itemize}
-\end{multicols}
-\subsubsection{$x \to 0$}
-\begin{multicols}{2}
+\subsubsection{$\lim_{x \to 0}$}
 \begin{itemize}[leftmargin=*]
-  \item $\frac{a^x - 1}{x} = \ln a$
-  \item $\frac{\sin x}{x} = 1$
-  \item $\frac{1 - \cos x}{x} = 0$
-  \item $\frac{\log_a (1 + x)}{x} = \frac{1}{\ln a}$
-  \item $x^a \ln x = 0, \; a  > 0$
+	\item $\lim_{x \to 0} \frac{a^x - 1}{x} = \ln a$
+	\item $\lim_{x \to 0} \frac{\sin x}{x} = 1$
+	\item $\lim_{x \to 0} \frac{1 - \cos x}{x} = 0$
+	\item $\lim_{x \to 0} \frac{\log_a (1 + x)}{x} = \frac{1}{\ln a}$
+	\item $\lim_{x \to 0} x^a \ln x = 0, \; a  > 0$
+	\item $\lim_{x \to 0} \frac{a^x-1}{x} = \ln a$ 
+	\item $\lim_{x \to 0} \frac{\sin(x)}{x} = 1$ 
+	\item $\lim_{x \to 0} \frac{1-\cos(x)}{x} = 0 \quad$ 
+	\item $\lim_{x \to 0} \frac{\log_a(1+x)}{x} = \frac{1}{\ln a}$
+	\item $\lim_{x \to 0} x^\alpha \ln x = 0 \qquad \alpha > 0$
 \end{itemize}
-\end{multicols}
 
 \subsection{Reihen}
 \begin{itemize}[leftmargin=*]
@@ -234,15 +265,6 @@ Es gelte: $\int f(x) \, dx = F(x)$
 	\item $\sum_{n=0}^m q^n = \frac{1-q^{m+1}}{1-q}$ 
 \end{itemize}
 
-\subsection{\texorpdfstring{$\log(x)$}{log(x)}}
-\includegraphics[scale=0.5]{log_x.png}
-
-\subsection{\texorpdfstring{$\frac{1}{x}$}{1/x}}
-\includegraphics[scale=0.5]{1_over_x.png}
-
-\subsection{\texorpdfstring{$\sqrt{x}$}{x^(1/x)}}
-\includegraphics[scale=0.5]{sqrt_x.png}
-
 \subsection{Kreuzprodukt}
 {\footnotesize
 \[
@@ -255,34 +277,7 @@ Es gelte: $\int f(x) \, dx = F(x)$
 \]
 }
 
-\subsection{Geometrische Körper}
-\subsubsection{Ellipsoid}
-Hat die Form eines Rugbyballs. In kartesischen Koordinaten definert durch
-$\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} - 1 = 0$.
-
-\subsection{Ausklammern}
-\begin{itemize}[leftmargin=*]
-	\item $x^n - y^n = (x-y) (x^{n-1} + x^{n-2}y + x^{n-3}y^2 + \ldots + xy^{n-2}
-	+ y^{n-1})$
-	\item $x^n - 1 = (x-1)(x^{n-1} + x^{n-2} + \ldots + x + 1)$
-\end{itemize}
-
-\subsection{Aus Serien}
-\begin{itemize}[leftmargin=*]
-	\item Ableitung von $x^x$ kann man berechnen, indem man $x = e^{\log(x)}$
-	setzt. Also in diesem Fall $e^{\log(x^x)} = e^{x \log(x)}$ ableitet, was $e^{x
-	\log(x)} (1 + \log(x))$ (Serie 10)
-	\item Cauchy-Schwarz Ungleichung: $|x \cdot y| \leq \|x\| \cdot \|y\|, \; x,y \in \R^n$
-	\item Euler Identität (komplexe Zahlen): $e^{ix} = \cos(x) + i \sin(x)$
-\end{itemize}
-
-\subsection{Funktionsmanipulation}
-\includegraphics[width=\columnwidth]{manipulation_1.eps}
-\includegraphics[width=\columnwidth]{manipulation_2.eps}
-\includegraphics[width=\columnwidth]{manipulation_3.eps}
-
 \begin{multicols}{2}
-
 \subsection{Exponent}
 \begin{itemize}[leftmargin=*]
   \item $a^n a^m = a^{n + m}$
@@ -329,32 +324,53 @@ $\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} - 1 = 0$.
   \item $\log_a (x-y) = \log_a x + \log_a (1- \frac{y}{x})$
 \end{itemize}
 
-\subsection{Wichtige Grenzwerte}
-			
+\subsection{Komplexe Zahlen}
 \begin{itemize}[leftmargin=*]
-  \item $ \lim\limits_{n \to \infty} \left( 1+\frac{x}{n} \right)^n = e^x \quad $
-  \item $ \lim\limits_{n \to \infty} \sqrt[n]{n} = 1 $ 
-  \item  $ \lim\limits_{x \to 0} \frac{a^x-1}{x} = \ln a $ 
-  \item $ \lim\limits_{x \to 0} \frac{\sin(x)}{x} = 1 $ 
-  \item $ \lim\limits_{x \to 0} \frac{1-\cos(x)}{x} = 0 \quad $ 
-  \item  $ \lim\limits_{x \to 0} \frac{\log_a(1+x)}{x} = \frac{1}{\ln a} $
-  \item $ \lim\limits_{n \to \infty} n^p q^n = 0 \qquad p \in \N \text{ und } 0 < q < 1 $
-  \item $ \lim\limits_{x \to 0} x^\alpha \ln x = 0 \qquad \alpha > 0 $
-  \item $ \lim\limits_{n \to \infty} \sqrt{x^2-x}-x = \frac{1}{2}$ (Lösungsansatz mit Taylorreihe ($\sqrt{1-x} = 1 + \frac{x}{2}+O(x^2)$): $\sqrt{x^2-x}-x = x(\sqrt{1-\frac{1}{x}}-1) = x((1+\frac{1}{2x}+O(\frac{1}{x^2}))-1) = \frac{1}{2}+O(\frac{1}{x}) \underset{n \to \infty}{\longrightarrow} \frac{1}{2} $ )
+	\item $z \in \C: z = a + b\cdot i$
+	\item $i^2 = -1$
+	\item $(a + bi) + (c + di) = (a + c) + (b + d)i$
+	\item $(a + bi) \cdot (c + di) = (ac - bd) + (ad + bc)i$
+	\item $\frac{a + bi}{c + di} = \frac{ac + bd}{c^2 + d^2} + \frac{bc - ad}{c^2 + d^2}\cdot i$
 \end{itemize}
 
-\subsection{Geometrie in 3D}
-%evtl. nicht nötig. Aber in alten prüfungen oft gefragt.
-\subsubsection{Volumen div. Körper}
+\subsection{Geometrische Körper}
+\subsubsection{Ellipsoid}
+Hat die Form eines Rugbyballs. In kartesischen Koordinaten definert durch
+$\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} - 1 = 0$.
+
+\subsection{Ausklammern}
 \begin{itemize}[leftmargin=*]
-  \item Quader (Länge mal Breite mal Höhe) $V = l \cdot b \cdot h$
-  \item Volumen eines Zylinders $V = r^2 \cdot \pi \cdot h$
-  \item Volumen einer Kugel  $V = \frac{4}{3} \cdot r^3 \cdot \pi$
-  \item Volumen einer Kegels  $V = \frac{1}{3} \cdot r^2 \cdot \pi \cdot h$
+	\item $x^n - y^n = (x-y) (x^{n-1} + x^{n-2}y + x^{n-3}y^2 + \ldots + xy^{n-2}
+	+ y^{n-1})$
+	\item $x^n - 1 = (x-1)(x^{n-1} + x^{n-2} + \ldots + x + 1)$
 \end{itemize}
-\subsubsection{Rotationskörper}
-Rotation um die x Achse $V=\pi \int_a^b f(x)^2 dx.$\\
-Rotation um die y Achse $V=2\pi \int_a^b x \cdot f(x) dx.$
 
+\subsection{Aus Serien}
+\begin{itemize}[leftmargin=*]
+	\item Ableitung von $x^x$ kann man berechnen, indem man $x = e^{\log(x)}$
+	setzt. Also in diesem Fall $e^{\log(x^x)} = e^{x \log(x)}$ ableitet, was $e^{x
+	\log(x)} (1 + \log(x))$ (Serie 10)
+	\item Cauchy-Schwarz Ungleichung: $|x \cdot y| \leq \|x\| \cdot \|y\|, \; x,y \in \R^n$
+	\item Euler Identität (komplexe Zahlen): $e^{ix} = \cos(x) + i \sin(x)$
+\end{itemize}
 
+\begin{landscape}\begin{multicols}{3}
 
+\subsection{\texorpdfstring{$\log(x)$}{log(x)}}
+\includegraphics[scale=0.5]{log_x.png}
+
+\subsection{\texorpdfstring{$\frac{1}{x}$}{1/x}}
+\includegraphics[scale=0.5]{1_over_x.png}
+
+\subsection{\texorpdfstring{$\sqrt{x}$}{x^(1/x)}}
+\includegraphics[scale=0.5]{sqrt_x.png}
+
+\subsection{Funktionsmanipulation}
+\includegraphics[width=\columnwidth]{manipulation_1.eps}
+\includegraphics[width=\columnwidth]{manipulation_2.eps}
+\includegraphics[width=\columnwidth]{manipulation_3.eps}
+
+\subsection{Pascalsches Dreieck}
+\includegraphics[width=\columnwidth]{pascal.png}
+
+\end{multicols}\end{landscape}

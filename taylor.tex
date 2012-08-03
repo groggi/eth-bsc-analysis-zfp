@@ -1,0 +1,47 @@
+\section{Taylorreihe / -entwicklung}
+Funktionen werden in der Umgebung eines bestimmten Punktes durch eine
+Potenzreihe dargestellt. Damit wird die ursprüngliche Funktion angenähert.
+
+Die Taylorreihe der Funktion $f$ mit Grad $m$ um den Punkt $a$ ist:
+$T_m f(x;a) = \sum_{n = 0}^m \frac{f^{(n)}(a)}{n!}(x - a)^n$\newline
+{\small
+$= f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 +
+\frac{f^{(3)}(a)}{3!}(x-a)^3 + \frac{f^{(4)}(a)}{4!}(x-a)^4\ldots$
+}
+
+Dabei ist $n! = 1 \cdot 2 \cdot 3 \cdot \ldots \cdot n$
+
+\subsection{Rechenregeln}
+\subsubsection{Addition}
+$f, g$ sind $m$-mal differenzierbar:
+
+$T_m (f + g)(x;a) = T_m f(x;a) + T_m g(x;a)$
+
+\subsubsection{Multiplikation}
+$f, g$ sind $m$-mal differenzierbar:
+
+$T_m (f \cdot g)(x;a) = T_m(T_m f(x;a) \cdot T_m g(x;a))$
+
+\underline{Achtung}: Anschaulich bedeutet es folgendes: Man
+multipliziert die beiden Taylorreihen von $f$ und $g$ miteinander ($T_m f(x;a) \cdot T_m g(x;a)$).
+Danach entfernt man alle Terme der Ordnung $> m$.
+
+\subsubsection{Kettenregel}
+$f: A \to B, g: B \to \R$ zwei $m$-mal differenzierbare Funktionen.
+Entwickelt wird um den Punkt $a \in A$ mit $f(a) = q$ ($q$ muss man berechnen).
+Dann gilt:
+\begin{align*}
+T_m (g \circ f)(x;a) &= T_m (f(g))(x;a)\\
+&= T_m(T_m(g)(x;q) \circ (T_m(f)(x;a) - q))
+\end{align*}
+
+\subsubsection{Bemerkungen / Eigenschaften / Konvergenz}
+\begin{itemize}
+	\item Der Konvergenzradius kann 0 sein
+	\item Falls Taylor-Reihe konvergiert, dann ist sie nicht notwendig gleich
+	der Funktion, die sie beschreibt. Gegenbeispiel:
+	$f(x) = \begin{cases}
+	e^{-\frac{1}{x}} & x > 0\\
+	0 & x \leq 0\end{cases}$
+	\item Ist $f$ eine Potenzreihe, dann ist diese Potenzreihe auch die Taylor-Reihe
+\end{itemize}

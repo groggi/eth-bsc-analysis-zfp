@@ -11,7 +11,7 @@ kann also $f$ differenzieren und bekommt mit $f'$ eine stetige Funktion. Es gilt
 auch $f \in C^1(I)$. $C^n(I)$ ist die Menge der $n$-mal stetig differenzierbaren
 Funktionen über dem Intervall $I$.
 
-\subsection{Mittelwertsatz}
+\subsection{Mittelwertsatz (Satz von Lagrange)}
 Ist $f$ au $[a,b]$ stetig und in $]a, b[$ differenzierbar, so gibt es ein $c
 \in ]a,b[$ mit
 \[
@@ -29,19 +29,26 @@ ist, gilt $e^x < e^u <^y$ und somit gilt: $e^x < \frac{e^y-e^x}{y-x} < e^y$.
 Multipliziert man nun mit dem Nenner des Bruchs bekommt man: $e^x (y-x) < e^y -
 e^x < e^y(y-x)$.
 
-
-\todo{Beispiel\ldots}
-
-\subsection{Monotonie, Extremstellen}
+\subsection{Monotonie}
 \begin{itemize}
-  \item $f' > 0 \Rightarrow f$ streng monoton steigend
-  \item $f' \geq 0 \Leftrightarrow f$ monoton steigend
-  \item $f' < 0 \Rightarrow f$ streng monoton fallend
-  \item $f' \leq 0 \Leftrightarrow f$ monoton fallend
-  \item $f'(x_0) = 0, f''(x_0) > 0 \Rightarrow$ Minimum bei $x_0$
-  \item $f'(x_0) = 0, f''(x_0) < 0 \Rightarrow$ Maximum bei $x_0$
-  \item $f''(x_0) = 0, f'''(x_0) \neq 0 \Rightarrow$ Wendepunkt in $x_0$
-  \item $f'(x_0) = 0, f''(x_0) = 0, f'''(x_0) \neq 0 \Rightarrow$ Sattelpunkt in
-  $x_0$
-  \item Extrema bei $x_0 \Rightarrow f'(x_0) = 0$
+	\item $f' > 0 \Rightarrow f$ streng monoton steigend
+	\item $f' \geq 0 \Leftrightarrow f$ monoton steigend
+	\item $f' < 0 \Rightarrow f$ streng monoton fallend
+	\item $f' \leq 0 \Leftrightarrow f$ monoton fallend
+\end{itemize}
+
+\subsubsection{Extremstellen}
+\begin{itemize}
+	\item $f'(x_0) = 0, f''(x_0) > 0 \Rightarrow$ Minimum bei $x_0$
+	\item $f'(x_0) = 0, f''(x_0) < 0 \Rightarrow$ Maximum bei $x_0$
+	\item $f''(x_0) = 0, f'''(x_0) \neq 0 \Rightarrow$ Wendepunkt in $x_0$
+	\item $f'(x_0) = 0, f''(x_0) = 0, f'''(x_0) \neq 0 \Rightarrow$ Sattelpunkt in
+  	$x_0$
+	\item Extrema bei $x_0 \Rightarrow f'(x_0) = 0$
+\end{itemize}
+
+\subsection{Zusammenhang zwischen Stetigkeit und Differenzierbarkeit}
+\begin{itemize}
+	\item differenzierbar $\Rightarrow$ stetig
+	\item differenzierbar $\not\Leftarrow$ stetig
 \end{itemize}
