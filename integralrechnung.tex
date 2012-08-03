@@ -18,6 +18,13 @@ $\int F'(g(x)) g'(x)dx = F(g(x))$
 	\item Ersetze im Ergebnis $u$ durch $g(x)$
 \end{enumerate}
 
+
+\subsubsection{Integrale mit Parametern}
+	Sei $h: \R^2 \to \R$ stetig und partiell nach $t$ diffbar mit stetiger Ableitungsfunktion. Betrachte 
+	\[ u(y) = \int_0^y h(x,y) \; \rmd x \]
+	Dann ist $u \in C^1(\R)$ und für die Ableitung gilt
+	\[ \dot{u}(y) = h(x,y)|_{x=y} + \int_0^y \frac{\partial h}{\partial y} (x,y) \; \rmd x \]
+
 \subsubsection{Beispiel: einfaches Integral}
 Das Integral $\int_{-2}^1 x^2 \,dx$ berechnet die blaue Fläche die durch die Funktion $f(x) = x^2$ beschränkt wird.
 $F(x)$ sei die Stammfunktion von $f(x)$,  generell berechnen wir $\int x^y \,dx = \frac{x^{(y+1)}}{y+1}$, somit $F(x) = \frac{x^3}{3}$.
