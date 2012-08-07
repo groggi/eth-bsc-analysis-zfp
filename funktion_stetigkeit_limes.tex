@@ -63,6 +63,17 @@ existiert, so dass gilt:
 \forall x_1,x_2 \in \R: \|f(x_1) - f(x_2)\| \leq L \cdot \|x_1 - x_2\|
 \]
 
+\subsubsection{Beispiel}
+Zeigen sie das die alternierende harmonische Reihe \[
+\sum_{n=1}^\infty (-1)^{n-1} \frac{1}{n} = 1 - \frac{1}{2} +\frac{1}{3} - \frac{1}{4} + \frac{1}{5} - ...
+\]
+konvergiert. Man zeige, dass der Grenzwert $L$ die Ungleichung $ \frac{1}{2} < L < \frac{1}{5}$ erfüllt.\\
+\\
+Die Reihe konvergiert. Sei $L_N = \sum_{n=1}^N (-1)^{n-1} \frac{1}{n}$ die N-te Partialsumme. Es gilt \[
+L_2 < L_4 < L_6 < ... < L_5 < L_3 < L_1
+\] und daraus folgt $L_2 = \frac{1}{2} < L < \frac{1}{5} = L_3$.
+
+
 \subsection{Stetigkeit, Differenzierbarkeit, Integrierbarkeit}
 Sei $f$ eine Funktion, so gilt:
 
