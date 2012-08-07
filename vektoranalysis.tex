@@ -57,7 +57,7 @@ K_1}{\partial x} + \frac{\partial K_2}{\partial y} + \frac{\partial
 K_3}{\partial z}$
 \end{definition}
 
-\subsubsection{Bestimmung eines Potentials im $\R^2$}
+\subsection{Bestimmung eines Potentials im $\R^2$}
 Sei $\vec{v} = \begin{pmatrix}
 P(x,y)\\
 Q(x,y)
@@ -78,7 +78,7 @@ kann man prüfen ob gilt: $P_y = Q_x$, wenn nicht, so hat $\vec{v}$ kein Potenti
 	Dieser taucht im Grunde auch in der fertigen $f(x,y)$ Funktion auf.
 \end{enumerate}
 
-\subsubsection{Bestimmung eines Potentials im $\R^3$}
+\subsection{Bestimmung eines Potentials im $\R^3$}
 Sei $\vec{v} = \begin{pmatrix}
 P(x,y,z)\\
 Q(x,y,z)\\
@@ -104,3 +104,25 @@ zu sein, also wirbelfrei zu sein. Dazu muss gelten (zu zeigen mit $\rot \vec{v} 
 	\item $D_z(z)$ wird wiederrum durch Integration zu $D(z) = \int D_z(z)\; dz + c, \quad c \in \R$
 	\item Das berechnete $D(z)$ in die $f(x,y,z)$ Gleichung aus Punkt 6 einsetzen, fertig.
 \end{enumerate}
+
+\subsection{Geometrisches Verständniss}
+Sei B ein drei dimensionaler Körper (beschrieben durch Punkte in $\R^3$ mit der Funktion $f$) so sei $\nabla f$ senkrecht dazu.
+
+\subsubsection{Beispiel}
+%aus analysis 2 (2012) serie 11 mc 3
+Gib einen Vektoren der ein nach aussen gerichteter Normalenvektor
+(nicht notwendigerweise normiert) auf dem Rand des Ellipsoids ist \[
+B := 
+\left\{ 
+	\begin{pmatrix} x\\ y\\ z \end{pmatrix} \in \R^3  
+	\middle\vert
+	f\begin{pmatrix} x\\ y\\ z \end{pmatrix} 
+		= \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} \leq 1
+\right\}
+\]
+
+Der Vektor $\begin{pmatrix} 2x/a^2\\ 2y/b^2\\ 2z/c^2 \end{pmatrix}$ ist gleich $\nabla f$ und steht somit 
+senkrecht auf der Niveaufläche $f=1$. Da er vom Ursprung weg orientiert ist, liefert er die richtige Antwort.\\
+Der Vektor $\begin{pmatrix} yz(1/b^2-1/c^2)\\ xz(1/c^2-1/a^2)\\ xy(1/a^2-1/b^2) \end{pmatrix}$ ist tangential 
+zum Rand $\partial B$
+
