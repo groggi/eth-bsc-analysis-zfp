@@ -18,6 +18,7 @@ und den Betrag des steilsten Anstiegs des Graphen von $f$.
 
 \begin{definition}[Potential]
 Ist $\vec{v} = \grad f$ der Gradient von $f$, so ist $f$ das Potential oder Stammfunktion zu $\vec{v}$.
+Existiert wenn $\rot \vec{f} = \vec{0}$ und der Definitionsbereich zusamenhängend ist.
 \end{definition}
 
 \begin{definition}[Gradientenfeld / Potentialfeld]
@@ -56,6 +57,11 @@ $\operatorname{div} \vec{K}(x,y,z) := \frac{\partial
 K_1}{\partial x} + \frac{\partial K_2}{\partial y} + \frac{\partial
 K_3}{\partial z}$
 \end{definition}
+
+\begin{lemma}[Geschlossener Weg]
+Wenn $F = grad \phi$, respektive $\rot \vec{F} =\vec{0}$ und der Definitionsbereich zusammenhängend ist,
+sowie $\gamma$ geschlossen ist, so folgt $\int_\gamma F = 0$.
+\end{lemma}
 
 \subsection{Bestimmung eines Potentials im $\R^2$}
 Sei $\vec{v} = \begin{pmatrix}
