@@ -299,3 +299,32 @@ y_p &= \underbrace{u_1(x)}_{D_1 \text{ in } y_h} \sin(x) + \underbrace{u_2(x)}_{
 Da wir nun auch die partikuläre Lösung haben, können wir die allgemeine Lösung
 des inhomogenen DGL berechnen:
 $\underline{\underline{y}} = y_h + y_p = \underline{\underline{D_1 \sin(x) + D_2 \cos(x) + 2 \ln(\cos(x)) \sin(x) + 2x \cos(x)}}$
+
+\subsection{Ansätze für partikuläre Lösung}
+	\textbf{Hinweis}: nur brauchbar für lineare DGL mit konstanten Koeffizienten \\
+	\\
+	Bezeichnungen:
+	\begin{align*}
+	P(x)  &  \quad \text{charakt. Polynom der DGL}  \\
+	S_k(x) & \quad \text{polynomielle Störfunktion, Grad} \; k \\
+	A, B & \quad \text{unbekannte Konstanten} \\
+	R_k(x) = a_k x^k + . + a_1 x + a_0 & \quad \text{mit unbekannten Koeffizienten}
+	\end{align*}
+	
+	
+	
+	\begin{tabular}{l|l}
+		$g(x)$ & $Ansatz$ \\ \hline \hline
+		$ c e^{mx} $  & $A e^{mx}$ , falls $P(m) \neq 0$\\
+		&  $A x^q e^{mx}$, falls $m$ $q$-fache NST von $P$ \\ \hline
+		$ S_k(x) $  & $R_k(x)$ , falls $P(0) \neq 0$\\
+		&  $x^q R_k(x)$, falls $0$ $q$-fache NST von $P$ \\ \hline
+		$ P_k(x) e^{mx} $  & $R_k(x) e^{mx}$ , falls $P(m) \neq 0$\\
+		&  $x^q R_k(x) e^{mx}$, falls $m$ $q$-fache NST von $P$ \\ \hline
+		$ \sin wx, \cos wx $  & $A \cos wx + B \sin wx$ , falls $P(\pm iw) \neq 0$\\
+		&  $x^q (A \cos wx + B \sin wx)$, falls $\pm iw$ \\
+		& $q$-fache NST von $P$ \\ \hline
+		$ \sinh wx, \cosh wx $  & $A \cosh wx + B \sinh wx$ , falls $P(w) \neq 0$\\
+		&  $x^q (A \cosh wx + B \sinh wx)$, falls $w$ \\
+		& $q$-fache NST von $P$ \\
+	\end{tabular}
