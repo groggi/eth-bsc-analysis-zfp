@@ -236,7 +236,7 @@ Es gelte: $\int f(x) \, dx = F(x)$
 	n^\alpha (\alpha > 0), \quad q^n (q > 1), \quad n!, \quad n^n$ $\Rightarrow
 	\lim_{x \to \infty} \frac{\ln n}{n^\alpha} = 0$
 \end{itemize}
-\subsubsection{$\lim_{n \to \infty}$}
+\subsubsection*{$\lim_{n \to \infty}$}
 \begin{itemize}[leftmargin=*]
 	\item $\lim_{n \to \infty} \sqrt[n]{a} \rightarrow 1$
 	\item $\lim_{n \to \infty} \sqrt[n]{n} \rightarrow 1$
@@ -261,7 +261,7 @@ Es gelte: $\int f(x) \, dx = F(x)$
 	($\sqrt{1-x} = 1 + \frac{x}{2}+O(x^2)$): $\sqrt{x^2-x}-x = x(\sqrt{1-\frac{1}{x}}-1) =
 	x((1+\frac{1}{2x}+O(\frac{1}{x^2}))-1) = \frac{1}{2}+O(\frac{1}{x}) \underset{n \to \infty}{\longrightarrow} \frac{1}{2}$ )}
 \end{itemize}
-\subsubsection{$\lim_{x \to 0}$}
+\subsubsection*{$\lim_{x \to 0}$}
 \begin{itemize}[leftmargin=*]
 	\item $\lim_{x \to 0} \frac{a^x - 1}{x} = \ln a$
 	\item $\lim_{x \to 0} \frac{\sin x}{x} = 1$
@@ -364,7 +364,7 @@ Es gelte: $\int f(x) \, dx = F(x)$
   \item $\log_a x = \frac{\ln x}{\ln a}$
   \item $\log_a (x+y) = \log_a x + log_a (1 + \frac{y}{x})$
   \item $\log_a (x-y) = \log_a x + \log_a (1- \frac{y}{x})$
-  \item $e^{a+bi} = e^a(\cos(x) + i \sin(x))$ (Euler Identität)
+  \item $e^{a+bi} = e^a(\cos(b) + i \sin(b))$ (Euler Identität)
   \item $e^{b \ln(a)} = a^b$
   \item $ e^{-\ln(b)} = \frac{1}{b}$
 \end{itemize}
@@ -372,6 +372,8 @@ Es gelte: $\int f(x) \, dx = F(x)$
 \subsection{Komplexe Zahlen}
 \begin{itemize}[leftmargin=*]
 	\item $z \in \C: z = a + b\cdot i$
+	\item $\bar{z} = a - b\cdot i$
+	\item $|z|^2 = z \cdot \bar{z} = (a + b\cdot i) \cdot (a - b\cdot i) = a^2 + b^2$
 	\item $i^2 = -1$
 	\item $(a + bi) + (c + di) = (a + c) + (b + d)i$
 	\item $(a + bi) \cdot (c + di) = (ac - bd) + (ad + bc)i$
@@ -385,16 +387,31 @@ $\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} - 1 = 0$.
 
 \subsection{Geometrie in 3D}
 %evtl. nicht nötig. Aber in alten prüfungen oft gefragt.
-\subsubsection{Volumen div. Körper}
-\begin{itemize}[leftmargin=*]
-   \item Quader (Länge mal Breite mal Höhe) $V = l \cdot b \cdot h$
-   \item Volumen eines Zylinders $V = r^2 \cdot \pi \cdot h$
-   \item Volumen einer Kugel  $V = \frac{4}{3} \cdot r^3 \cdot \pi$
-   \item Volumen einer Kegels  $V = \frac{1}{3} \cdot r^2 \cdot \pi \cdot h$
-\end{itemize}
- \subsubsection{Rotationskörper}
+\subsubsection*{Masse von speziellen Gebieten}
+	\begin{multicols}{2}
+	\renewcommand\arraystretch{1.4}
+	\begin{tabular}{l|l}
+		Zylinder   &   $ V = \pi r^2 h $ \\
+		Pyramide   &   $ V = \frac{1}{3} G h $ \\
+		Ellipsoid   &   $ V = \frac{4 \pi}{3} a b c $ \\
+		Kegel   &   $ V = \frac{\pi}{3} r^2 h $ \\
+		Kegelstumpf   &   $ V = \frac{\pi h}{3} (r_1^2+r_2^2 + r_1 r_2) $ 
+	\end{tabular}
+	
+	\columnbreak
+	\begin{tabular}{l|l}
+		Torus   &   $ V = 2 \pi^2 R r^2 $ \\
+		   &   $ S = 4 \pi^2 R r $ \\
+		Kugel   &   $ V = \frac{4 \pi}{3} r^3 $ \\
+		   &   $ S = 4 \pi r^2 $ 
+	\end{tabular}
+	\end{multicols}
+
+ \subsubsection*{Rotationskörper}
  Rotation um die x Achse $V=\pi \int_a^b f(x)^2 dx.$\\
  Rotation um die y Achse $V=2\pi \int_a^b x \cdot f(x) dx.$
+
+
 
 \subsection{Ausklammern}
 \begin{itemize}[leftmargin=*]
