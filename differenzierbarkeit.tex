@@ -39,6 +39,24 @@ e^x < e^y(y-x)$.
 Insbesondere besitzt die Funktion $f$ wenn sie streng monoton wachsend/fallend ist
 weder kritische Punkte, noch lokale oder globale Extrema.
 
+\subsection{Konvexität}
+\begin{definition}[konvex]
+Eine Funktion $f$ ist konvex, wenn $\forall a,b: f(\frac{a + b}{2}) \leq \frac{f(a) + f(b)}{2}$
+\end{definition}
+
+\begin{definition}[konkav]
+Eine Funktion $f$ ist konkav, wenn $\forall a,b: f(\frac{a + b}{2}) \geq \frac{f(a) + f(b)}{2}$
+\end{definition}
+
+\underline{Anschaulich:} Anschaulich bedeutet das, dass bei einer konvexen Funktion
+der Graph immer unter und bei einer konkaven stets über der Sekante liegt. Der Graph
+konvexer Funktionen ist linksgekrümmt, der konkaver Funktionen ist rechtsgekrümmt.
+
+\begin{itemize}
+	\item $f'' \geq 0 \Leftrightarrow f$ konvex
+	\item $f'' \leq 0 \Leftrightarrow f$ konkav
+\end{itemize}
+
 \subsubsection{Extremstellen}
 \begin{itemize}
 	\item $f'(x_0) = 0, f''(x_0) > 0 \Rightarrow$ Minimum bei $x_0$
