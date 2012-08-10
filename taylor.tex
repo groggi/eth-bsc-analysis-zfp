@@ -28,11 +28,12 @@ Danach entfernt man alle Terme der Ordnung $> m$.
 
 \subsubsection{Kettenregel}
 $f: A \to B, g: B \to \R$ zwei $m$-mal differenzierbare Funktionen.
-Entwickelt wird um den Punkt $a \in A$ mit $f(a) = q$ ($q$ muss man berechnen).
+Entwickelt wird um den Punkt $a \in A$ mit $g(a) = q$ ($q$ muss man berechnen).
 Dann gilt:
 \begin{align*}
 T_m (g \circ f)(x;a) &= T_m (f(g))(x;a)\\
-&= T_m(T_m(g)(x;q) \circ (T_m(f)(x;a) - q))
+&= T_m(T_m g(x;a) \circ T_m f(x;q))\\
+& = T_m(T_m f(T_m g(x;a))(x;q))
 \end{align*}
 
 \subsubsection{Bemerkungen / Eigenschaften / Konvergenz}
