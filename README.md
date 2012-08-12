@@ -1,6 +1,7 @@
 #Inhalt
 
 Diese Zusammenfassung wurde für die FS12 D-INFK Analysis 1&2 Prüfung an der ETH Zürich verfasst. Wir geben keine Garantie auf Vollständigkeit oder Korrektheit.
+Die Vorlesung wurde von Prof. M. Burger gehalten.
 
 #Beitragende
 
