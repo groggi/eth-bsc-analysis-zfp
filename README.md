@@ -12,6 +12,9 @@ Die Vorlesung wurde von Prof. M. Burger gehalten.
 
 Ein grosser Dank geht auch an Stefan Heule (www.stefanheule.com), auf dessen Zusammenfassung diese hier ursprünglich basiert hat (insbesondere die ganzen LaTeX Einstellungen).
 
+#Erstellen
+main.tex ist die zentrale LaTeX Datei. Ein PDF Kann beispielsweise mittels `pdftex main.tex` generiert werden.
+
 #Lizenz
 Creative Commons Attribution-Share Alike 3.0 Unported
 http://creativecommons.org/licenses/by-sa/3.0/
